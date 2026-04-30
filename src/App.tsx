@@ -9,6 +9,7 @@ import { Features } from './sections/Features.tsx';
 import { Navigation } from './components/Navigation.tsx';
 import { AnimatedBackground } from './components/AnimatedBackground.tsx';
 import { TeamPage } from './pages/TeamPage.tsx';
+import { LookbookPage } from './pages/Lookbook.tsx';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -21,7 +22,7 @@ export default function App() {
   const stRef = useRef<ScrollTrigger | null>(null);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [slideProgress, setSlideProgress] = useState(0);
-  const [currentView, setCurrentView] = useState<'home' | 'team'>('home');
+  const [currentView, setCurrentView] = useState<'home' | 'team' | 'lookbook'>('home');
 
 
   // Soft Parallax effect for the hero when scrolling down
@@ -184,11 +185,19 @@ export default function App() {
               <ContactSection />
             </div>
           </>
-        ) : (
+        ) : currentView === 'team' ? (
           <div className="relative z-10 w-full">
             <TeamPage setCurrentView={setCurrentView} />
 
             {/* Simple Contact Footer for other pages */}
+            <div className="relative w-full max-w-[1600px] z-20">
+              <ContactSection />
+            </div>
+          </div>
+        ) : (
+          <div className="relative z-10 w-full">
+            <LookbookPage setCurrentView={setCurrentView} />
+
             <div className="relative w-full max-w-[1600px] z-20">
               <ContactSection />
             </div>

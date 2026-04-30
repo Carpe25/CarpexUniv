@@ -2,8 +2,8 @@ import { useState } from 'react';
 import { X } from 'lucide-react';
 
 interface NavigationProps {
-    currentView: 'home' | 'team';
-    setCurrentView: (view: 'home' | 'team') => void;
+    currentView: 'home' | 'team' | 'lookbook';
+    setCurrentView: (view: 'home' | 'team' | 'lookbook') => void;
 }
 
 export const Navigation = ({ currentView, setCurrentView }: NavigationProps) => {
@@ -14,8 +14,8 @@ export const Navigation = ({ currentView, setCurrentView }: NavigationProps) => 
     const handleNav = (destination: string) => {
         setIsMenuOpen(false);
 
-        if (destination === 'team') {
-            setCurrentView('team');
+        if (destination === 'team' || destination === 'lookbook') {
+            setCurrentView(destination as 'team' | 'lookbook');
             window.scrollTo({ top: 0, behavior: 'instant' });
             return;
         }
@@ -92,6 +92,7 @@ export const Navigation = ({ currentView, setCurrentView }: NavigationProps) => 
                 <nav className="flex flex-col gap-8 items-start">
                     {[
                         { name: 'Home', id: 'home' },
+                        { name: 'Lookbook', id: 'lookbook' },
                         { name: 'Services & Operations', id: 'services' },
                         { name: 'Our Team', id: 'team' },
                         { name: 'Direct Inquiry', id: 'contact' }
