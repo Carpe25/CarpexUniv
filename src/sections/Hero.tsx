@@ -1,7 +1,7 @@
 export const Hero = () => {
-    const scrollToContact = () => {
-        document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-    };
+    // const scrollToContact = () => {
+    //     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    // };
 
     return (
         <section className="relative w-full">
