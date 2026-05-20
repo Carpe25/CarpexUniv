@@ -49,7 +49,7 @@ export const TeamPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen bg-[#F9F7F2] text-[#2a2725]">
+    <div className="relative w-full min-h-screen bg-white text-[#1a1a1a]">
       
       {/* Fixed Logo Container - Aligned with 1600px bounds */}
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1600px] z-[110] pointer-events-none">
@@ -78,14 +78,14 @@ export const TeamPage: React.FC = () => {
                 fontWeight: 600,
                 letterSpacing: '0.25em',
                 textTransform: 'uppercase',
-                color: '#8c857d',
+                color: '#6b7280',
               }}
             >
               The Visionaries
             </span>
             <div
               className="mt-4"
-              style={{ width: '40px', height: '1px', background: '#D4AF37' }}
+              style={{ width: '40px', height: '1px', background: '#E6552E' }}
             />
           </div>
 
@@ -93,9 +93,9 @@ export const TeamPage: React.FC = () => {
             className="team-headline mb-24 lg:mb-32"
             style={{
               fontFamily: 'Inter, sans-serif',
-              fontSize: 'clamp(48px, 8vw, 96px)',
+              fontSize: 'clamp(36px, 6vw, 72px)',
               fontWeight: 400,
-              color: '#2a2725',
+              color: '#1a1a1a',
               lineHeight: 1,
               letterSpacing: '-0.02em',
               maxWidth: '900px',
@@ -109,7 +109,7 @@ export const TeamPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20 xl:gap-24">
             {teamMembers.map((member, i) => (
               <div key={i} className="team-member-card group">
-                <div className="relative aspect-[4/5] overflow-hidden mb-10 bg-[#EEEDE9] shadow-xl">
+                <div className="relative aspect-[4/5] overflow-hidden mb-10 bg-[#e5e7eb] shadow-xl">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -121,9 +121,9 @@ export const TeamPage: React.FC = () => {
                 <h3
                   style={{
                     fontFamily: 'Inter, sans-serif',
-                    fontSize: '32px',
+                    fontSize: '24px',
                     fontWeight: 400,
-                    color: '#2a2725',
+                    color: '#1a1a1a',
                     marginBottom: '10px',
                   }}
                 >
@@ -137,7 +137,7 @@ export const TeamPage: React.FC = () => {
                     fontWeight: 600,
                     letterSpacing: '0.15em',
                     textTransform: 'uppercase',
-                    color: '#D4AF37',
+                    color: '#E6552E',
                     display: 'block',
                     marginBottom: '24px',
                   }}
@@ -145,14 +145,14 @@ export const TeamPage: React.FC = () => {
                   {member.role}
                 </span>
                 
-                <div className="w-8 h-[1px] bg-[#e2ddd8] mb-6 group-hover:w-16 transition-all duration-500" />
+                <div className="w-8 h-[1px] bg-[#e5e7eb] mb-6 group-hover:w-16 transition-all duration-500" />
                 
                 <p
                   style={{
                     fontFamily: 'Inter, sans-serif',
-                    fontSize: '15px',
+                    fontSize: '13px',
                     fontWeight: 300,
-                    color: '#655f59',
+                    color: '#6b7280',
                     lineHeight: 1.8,
                     maxWidth: '340px'
                   }}

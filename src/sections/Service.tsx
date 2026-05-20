@@ -48,13 +48,13 @@ export const Slide: React.FC<SlideProps> = ({ data, isActive }) => {
             ref={slideRef}
             className={`absolute inset-0 flex transition-opacity duration-1000 h-full w-full overflow-hidden ${isActive ? 'opacity-100 pointer-events-auto z-20' : 'opacity-0 pointer-events-none z-10'
                 }`}
-            style={{ background: '#F9F7F2' }}
+            style={{ background: '#FFFFFF' }}
         >
             {/* Left Side - Content */}
             <div
                 ref={contentRef}
                 className="relative z-10 w-full lg:w-1/2 flex flex-col justify-center px-8 lg:px-16 xl:px-24 py-20"
-                style={{ background: '#F9F7F2' }}
+                style={{ background: '#FFFFFF' }}
             >
                 {/* Category Label */}
                 <div className="mb-8">
@@ -66,7 +66,7 @@ export const Slide: React.FC<SlideProps> = ({ data, isActive }) => {
                             fontWeight: 600,
                             letterSpacing: '0.25em',
                             textTransform: 'uppercase',
-                            color: '#8c857d', // Muted consultancy taupe
+                            color: '#6b7280', // Muted consultancy taupe
                         }}
                     >
                         {data.label}
@@ -77,7 +77,7 @@ export const Slide: React.FC<SlideProps> = ({ data, isActive }) => {
                         style={{
                             width: '40px',
                             height: '1px',
-                            background: '#D4AF37', // Gold accent
+                            background: '#E6552E', // Gold accent
                         }}
                     />
                 </div>
@@ -87,9 +87,9 @@ export const Slide: React.FC<SlideProps> = ({ data, isActive }) => {
                     className="slide-element mb-8 whitespace-pre-line"
                     style={{
                         fontFamily: 'Inter, sans-serif',
-                        fontSize: 'clamp(42px, 6vw, 76px)',
+                        fontSize: 'clamp(32px, 5vw, 60px)',
                         fontWeight: 400, // Thinner, elegant weight
-                        color: '#2a2725', // Deep charcoal
+                        color: '#1a1a1a', // Deep charcoal
                         lineHeight: 1.1,
                         letterSpacing: '-0.02em',
                     }}
@@ -99,12 +99,12 @@ export const Slide: React.FC<SlideProps> = ({ data, isActive }) => {
 
                 {/* Description */}
                 <p
-                    className="slide-element max-w-md mb-12 pl-4 border-l border-[#e2ddd8]"
+                    className="slide-element max-w-md mb-12 pl-4 border-l border-[#e5e7eb]"
                     style={{
                         fontFamily: 'Inter, sans-serif',
-                        fontSize: '16px',
+                        fontSize: '14px',
                         fontWeight: 300, // Lighter, editorial feel
-                        color: '#655f59', // Softer grey
+                        color: '#6b7280', // Softer grey
                         lineHeight: 1.8,
                     }}
                 >
@@ -114,12 +114,12 @@ export const Slide: React.FC<SlideProps> = ({ data, isActive }) => {
             </div>
 
             {/* Right Side - Background Image */}
-            <div className="hidden lg:block absolute top-0 right-0 w-1/2 h-full bg-[#EEEDE9] overflow-hidden">
+            <div className="hidden lg:block absolute top-0 right-0 w-1/2 h-full bg-[#e5e7eb] overflow-hidden">
                 {/* Smooth Gradient overlay blending into image */}
                 <div
                     className="absolute inset-0 z-10 pointer-events-none"
                     style={{
-                        background: 'linear-gradient(to right, #F9F7F2 0%, transparent 25%)',
+                        background: 'linear-gradient(to right, #FFFFFF 0%, transparent 25%)',
                     }}
                 />
 
@@ -153,7 +153,7 @@ export const Slide: React.FC<SlideProps> = ({ data, isActive }) => {
             <div
                 className="lg:hidden absolute inset-0 z-0 pointer-events-none"
                 style={{
-                    background: 'linear-gradient(to bottom, #F9F7F2 60%, rgba(249, 247, 242, 0.9) 100%)',
+                    background: 'linear-gradient(to bottom, #FFFFFF 60%, rgba(255,255,255,0.9) 100%)',
                 }}
             />
         </article>

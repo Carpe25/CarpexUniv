@@ -56,8 +56,8 @@ export const OurTeam: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full border-t border-[#e2ddd8]"
-      style={{ background: '#F9F7F2', padding: 'clamp(72px, 8vw, 112px) 0' }}
+      className="w-full border-t border-[#e5e7eb]"
+      style={{ background: '#FFFFFF', padding: 'clamp(72px, 8vw, 112px) 0' }}
     >
       <div className="px-8 lg:px-16 xl:px-24">
         
@@ -70,14 +70,14 @@ export const OurTeam: React.FC = () => {
               fontWeight: 600,
               letterSpacing: '0.25em',
               textTransform: 'uppercase' as const,
-              color: '#8c857d',
+              color: '#6b7280',
             }}
           >
             The Visionaries
           </span>
           <div
             className="mt-4"
-            style={{ width: '40px', height: '1px', background: '#D4AF37' }}
+            style={{ width: '40px', height: '1px', background: '#E6552E' }}
           />
         </div>
 
@@ -85,9 +85,9 @@ export const OurTeam: React.FC = () => {
           className="team-headline mb-16 lg:mb-20"
           style={{
             fontFamily: 'Inter, sans-serif',
-            fontSize: 'clamp(42px, 6vw, 76px)',
+            fontSize: 'clamp(32px, 5vw, 60px)',
             fontWeight: 400,
-            color: '#2a2725',
+            color: '#1a1a1a',
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
             maxWidth: '640px',
@@ -101,7 +101,7 @@ export const OurTeam: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
           {teamMembers.map((member, i) => (
             <div key={i} className="team-member-card group">
-              <div className="relative aspect-[4/5] overflow-hidden mb-8 bg-[#EEEDE9]">
+              <div className="relative aspect-[4/5] overflow-hidden mb-8 bg-[#e5e7eb]">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -113,9 +113,9 @@ export const OurTeam: React.FC = () => {
               <h3
                 style={{
                   fontFamily: 'Inter, sans-serif',
-                  fontSize: '28px',
+                  fontSize: '22px',
                   fontWeight: 400,
-                  color: '#2a2725',
+                  color: '#1a1a1a',
                   marginBottom: '8px',
                 }}
               >
@@ -129,7 +129,7 @@ export const OurTeam: React.FC = () => {
                   fontWeight: 600,
                   letterSpacing: '0.15em',
                   textTransform: 'uppercase' as const,
-                  color: '#D4AF37',
+                  color: '#E6552E',
                   display: 'block',
                   marginBottom: '20px',
                 }}
@@ -142,7 +142,7 @@ export const OurTeam: React.FC = () => {
                   fontFamily: 'Inter, sans-serif',
                   fontSize: '14px',
                   fontWeight: 300,
-                  color: '#655f59',
+                  color: '#6b7280',
                   lineHeight: 1.6,
                   maxWidth: '320px'
                 }}

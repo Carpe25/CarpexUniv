@@ -5,12 +5,11 @@
 /* Custom Theme Configuration for Tailwind v4 */
 @theme {
   /* Primary Colors */
-  --color-cream: #F9F7F2;
-  --color-ivory: #F2EEE5;
-  --color-gold: #D4AF37;
-  --color-gold-dark: #C5A048;
-  --color-mocha: #3C3633;
-  --color-mocha-light: #7A746E;
+  --color-cream: #f9f9f9;
+  --color-ivory: #f3f4f6;
+  --color-primary: #E6552E;
+  --color-mocha: #1a1a1a;
+  --color-mocha-light: #6b7280;
 
   /* Legacy dark color */
   --color-dark: #0a0a0a;
@@ -40,8 +39,8 @@ body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   line-height: 1.6;
-  color: #3C3633;
-  background-color: #F9F7F2;
+  color: #1a1a1a;
+  background-color: #FFFFFF;
 }
 
 /* Typography */
@@ -54,7 +53,7 @@ h6 {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   line-height: 1.2;
-  color: #3C3633;
+  color: #1a1a1a;
 }
 
 /* Navigation Links Style */
@@ -68,8 +67,8 @@ h6 {
 
 /* Button Styles - No border radius for sharp modern look */
 .btn-primary {
-  background-color: #D4AF37;
-  color: #F9F7F2;
+  background-color: #E6552E;
+  color: #FFFFFF;
   border-radius: 0;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
@@ -79,7 +78,7 @@ h6 {
 }
 
 .btn-primary:hover {
-  background-color: #C5A048;
+  background-color: #c9441e;
 }
 
 /* Video elements */
@@ -91,12 +90,11 @@ video {
 
 @theme {
   /* Existing theme variables */
-  --color-cream: #F9F7F2;
-  --color-ivory: #F2EEE5;
-  --color-gold: #D4AF37;
-  --color-gold-dark: #C5A048;
-  --color-mocha: #3C3633;
-  --color-mocha-light: #7A746E;
+  --color-cream: #f9f9f9;
+  --color-ivory: #f3f4f6;
+  --color-primary: #E6552E;
+  --color-mocha: #1a1a1a;
+  --color-mocha-light: #6b7280;
   --color-dark: #0a0a0a;
 
   /* New Animation Durations */

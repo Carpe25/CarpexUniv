@@ -119,14 +119,14 @@ export const HomePage = () => {
       {/* Main Content */}
       <main
         className="relative z-10 w-full shadow-[0_-20px_40px_rgba(0,0,0,0.05)]"
-        style={{ background: '#F9F7F2', marginTop: '100vh' }}
+        style={{ background: '#FFFFFF', marginTop: '100vh' }}
       >
         <AboutUs />
-        <div ref={containerRef} className="relative h-screen overflow-hidden flex flex-col" style={{ backgroundColor: '#F9F7F2' }}>
+        <div ref={containerRef} className="relative h-screen overflow-hidden flex flex-col" style={{ backgroundColor: '#FFFFFF' }}>
           <section className="flex-1 relative w-full">
             <div
               className="absolute inset-x-0 bottom-0 h-[40vh] z-[5] pointer-events-none mix-blend-multiply opacity-5"
-              style={{ background: 'linear-gradient(to top, #8c857d, transparent)' }}
+              style={{ background: 'linear-gradient(to top, #6b7280, transparent)' }}
             />
             <div className="relative w-full h-full">
               {SLIDES.map((slide, index) => (

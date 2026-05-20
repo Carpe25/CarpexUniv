@@ -41,7 +41,7 @@ export const LookbookPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen bg-[#F9F7F2] text-[#2a2725]">
+    <div className="relative w-full min-h-screen bg-white text-[#1a1a1a]">
       
       {/* Fixed Logo Container */}
       <div className="fixed top-0 left-1/2 -translate-x-1/2 w-full max-w-[1600px] z-[110] pointer-events-none">
@@ -70,14 +70,14 @@ export const LookbookPage: React.FC = () => {
                 fontWeight: 600,
                 letterSpacing: '0.25em',
                 textTransform: 'uppercase',
-                color: '#8c857d',
+                color: '#6b7280',
               }}
             >
               The Collection
             </span>
             <div
               className="mt-4"
-              style={{ width: '40px', height: '1px', background: '#D4AF37' }}
+              style={{ width: '40px', height: '1px', background: '#E6552E' }}
             />
           </div>
 
@@ -85,9 +85,9 @@ export const LookbookPage: React.FC = () => {
             className="lookbook-headline mb-8"
             style={{
               fontFamily: 'Inter, sans-serif',
-              fontSize: 'clamp(48px, 8vw, 96px)',
+              fontSize: 'clamp(36px, 6vw, 72px)',
               fontWeight: 400,
-              color: '#2a2725',
+              color: '#1a1a1a',
               lineHeight: 1,
               letterSpacing: '-0.02em',
               maxWidth: '900px',
@@ -102,9 +102,9 @@ export const LookbookPage: React.FC = () => {
             <p
               style={{
                 fontFamily: 'Inter, sans-serif',
-                fontSize: '16px',
+                fontSize: '14px',
                 fontWeight: 300,
-                color: '#655f59',
+                color: '#6b7280',
                 lineHeight: 1.75,
                 maxWidth: '480px',
               }}
@@ -113,7 +113,7 @@ export const LookbookPage: React.FC = () => {
             </p>
             <a
               href="mailto:hello@univdiam.com?subject=Lookbook%20Full%20Access%20Request"
-              className="flex-shrink-0 inline-flex items-center gap-3 border border-[#2a2725] text-[#2a2725] px-7 py-4 hover:bg-[#2a2725] hover:text-white transition-colors duration-300"
+              className="flex-shrink-0 inline-flex items-center gap-3 border border-[#1a1a1a] text-[#1a1a1a] px-7 py-4 hover:bg-[#1a1a1a] hover:text-white transition-colors duration-300"
               style={{
                 fontFamily: 'Inter, sans-serif',
                 fontSize: '11px',
@@ -135,11 +135,11 @@ export const LookbookPage: React.FC = () => {
             
             {/* Row 1 */}
             <div className="flex w-full gap-1 sm:gap-2 h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh]">
-              <div className="lookbook-image-container w-[60%] relative h-full group overflow-hidden bg-[#EEEDE9]">
+              <div className="lookbook-image-container w-[60%] relative h-full group overflow-hidden bg-[#e5e7eb]">
                 <img src={jewelryImages.img1} alt="Jewelry 1" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
               </div>
-              <div className="lookbook-image-container w-[40%] relative h-full group overflow-hidden bg-[#EEEDE9]">
+              <div className="lookbook-image-container w-[40%] relative h-full group overflow-hidden bg-[#e5e7eb]">
                 <img src={jewelryImages.img2} alt="Jewelry 2" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
               </div>
@@ -147,15 +147,15 @@ export const LookbookPage: React.FC = () => {
 
             {/* Row 2 */}
             <div className="flex w-full gap-1 sm:gap-2 h-[35vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh]">
-              <div className="lookbook-image-container w-[40%] relative h-full group overflow-hidden bg-[#EEEDE9]">
+              <div className="lookbook-image-container w-[40%] relative h-full group overflow-hidden bg-[#e5e7eb]">
                 <img src={jewelryImages.img3} alt="Jewelry 3" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
               </div>
-              <div className="lookbook-image-container w-[60%] relative h-full group overflow-hidden bg-[#EEEDE9] cursor-pointer">
+              <div className="lookbook-image-container w-[60%] relative h-full group overflow-hidden bg-[#e5e7eb] cursor-pointer">
                 <img src={jewelryImages.img4} alt="Jewelry 4" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 flex items-center justify-center">
                    <div className="w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                     <Play className="w-5 h-5 text-[#2a2725] ml-1" fill="currentColor" />
+                     <Play className="w-5 h-5 text-[#1a1a1a] ml-1" fill="currentColor" />
                    </div>
                 </div>
               </div>
@@ -163,20 +163,20 @@ export const LookbookPage: React.FC = () => {
 
             {/* Row 3 - Complex 3 images */}
             <div className="flex w-full gap-1 sm:gap-2 h-[45vh] sm:h-[55vh] md:h-[65vh] lg:h-[75vh]">
-              <div className="lookbook-image-container w-[65%] relative h-full group overflow-hidden bg-[#EEEDE9]">
+              <div className="lookbook-image-container w-[65%] relative h-full group overflow-hidden bg-[#e5e7eb]">
                 <img src={jewelryImages.img5} alt="Jewelry 5" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
               </div>
               <div className="w-[35%] flex flex-col gap-1 sm:gap-2 h-full">
-                <div className="lookbook-image-container relative h-1/2 w-full group overflow-hidden bg-[#EEEDE9]">
+                <div className="lookbook-image-container relative h-1/2 w-full group overflow-hidden bg-[#e5e7eb]">
                   <img src={jewelryImages.img6} alt="Jewelry 6" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
                 </div>
-                <div className="lookbook-image-container relative h-1/2 w-full group overflow-hidden bg-[#EEEDE9] cursor-pointer">
+                <div className="lookbook-image-container relative h-1/2 w-full group overflow-hidden bg-[#e5e7eb] cursor-pointer">
                   <img src={jewelryImages.img7} alt="Jewelry 7" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500 flex items-center justify-center">
                      <div className="w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
-                       <Play className="w-4 h-4 text-[#2a2725] ml-1" fill="currentColor" />
+                       <Play className="w-4 h-4 text-[#1a1a1a] ml-1" fill="currentColor" />
                      </div>
                   </div>
                 </div>
@@ -185,11 +185,11 @@ export const LookbookPage: React.FC = () => {
 
             {/* Row 4 */}
             <div className="flex w-full gap-1 sm:gap-2 h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh]">
-              <div className="lookbook-image-container w-[35%] relative h-full group overflow-hidden bg-[#EEEDE9]">
+              <div className="lookbook-image-container w-[35%] relative h-full group overflow-hidden bg-[#e5e7eb]">
                 <img src={jewelryImages.img8} alt="Jewelry 8" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
               </div>
-              <div className="lookbook-image-container w-[65%] relative h-full group overflow-hidden bg-[#EEEDE9]">
+              <div className="lookbook-image-container w-[65%] relative h-full group overflow-hidden bg-[#e5e7eb]">
                 <img src={jewelryImages.img9} alt="Jewelry 9" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
               </div>

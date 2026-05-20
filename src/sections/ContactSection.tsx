@@ -32,7 +32,7 @@ export const ContactSection = () => {
     return (
         <section
             id="contact"
-            className="w-full relative bg-[#EEEDE9] border-t border-[#e2ddd8]"
+            className="w-full relative bg-white border-t border-[#e5e7eb]"
             style={{
                 padding: 'clamp(80px, 10vw, 120px) 0',
             }}
@@ -44,15 +44,15 @@ export const ContactSection = () => {
                     <div className="space-y-16">
                         {/* Heading */}
                         <div className="space-y-6">
-                            <span className="text-[#8c857d] font-sans text-xs md:text-sm tracking-[0.2em] uppercase font-medium">
+                            <span className="text-[#6b7280] font-sans text-xs md:text-sm tracking-[0.2em] uppercase font-medium">
                                 Direct Inquiry
                             </span>
                             <h2
                                 style={{
                                     fontFamily: 'Inter, sans-serif',
                                     fontWeight: 400,
-                                    fontSize: 'clamp(46px, 5vw, 64px)',
-                                    color: '#2a2725',
+                                    fontSize: 'clamp(36px, 4vw, 52px)',
+                                    color: '#1a1a1a',
                                     lineHeight: 1.05,
                                     letterSpacing: '-0.02em',
                                 }}
@@ -60,78 +60,75 @@ export const ContactSection = () => {
                                 Start a <br className="hidden sm:block" />
                                 conversation.
                             </h2>
-                            <p className="text-[#655f59] font-sans text-lg font-light max-w-sm leading-relaxed">
+                            <p className="text-[#6b7280] font-sans text-base font-light max-w-sm leading-relaxed">
                                 Tell us about what you're looking to create or manufacture. We'll guide you from there.
                             </p>
                         </div>
 
                         {/* Details List */}
-                        <div className="space-y-8 border-l border-[#D4AF37]/40 pl-6">
+                        <div className="space-y-8 border-l border-[#E6552E]/40 pl-6">
                             {/* Email */}
                             <a href="mailto:hello@univdiam.com" className="flex items-center gap-6 group">
-                                <Mail className="w-5 h-5 text-[#8c857d] group-hover:text-[#D4AF37] transition-colors stroke-[1.5]" />
-                                <span className="font-sans text-[#2a2725] text-base font-medium tracking-wide group-hover:text-[#D4AF37] transition-colors">
+                                <Mail className="w-5 h-5 text-[#6b7280] group-hover:text-[#E6552E] transition-colors stroke-[1.5]" />
+                                <span className="font-sans text-[#1a1a1a] text-base font-medium tracking-wide group-hover:text-[#E6552E] transition-colors">
                                     hello@univdiam.com
                                 </span>
                             </a>
 
                             {/* Phone */}
-                            <a href="tel:+919930900465" className="flex items-center gap-6 group">
-                                <Phone className="w-5 h-5 text-[#8c857d] group-hover:text-[#D4AF37] transition-colors stroke-[1.5]" />
-                                <span className="font-sans text-[#2a2725] text-base font-medium tracking-wide group-hover:text-[#D4AF37] transition-colors">
+                            <a href="tel:+412-391-9650" className="flex items-center gap-6 group">
+                                <Phone className="w-5 h-5 text-[#6b7280] group-hover:text-[#E6552E] transition-colors stroke-[1.5]" />
+                                <span className="font-sans text-[#1a1a1a] text-base font-medium tracking-wide group-hover:text-[#E6552E] transition-colors">
                                     +1 412 391 9650<br />
-                                    <span className="text-[#8c857d] text-sm font-normal">Girish Jain</span>
+                                    <span className="text-[#6b7280] text-sm font-normal">Girish Jain</span>
                                 </span>
                             </a>
 
                             {/* Address */}
                             <div className="flex items-start gap-6 pt-2">
-                                <MapPin className="w-5 h-5 text-[#8c857d] flex-shrink-0 mt-1 stroke-[1.5]" />
-                                <span className="font-sans text-[#655f59] text-sm font-light leading-relaxed max-w-[280px]">
-                                    <strong className="text-[#2a2725] font-medium block mb-1">Univ Diam</strong>
-                                    <span className="text-[#8c857d] text-xs block mb-1">A division of Carpe Diam Jewels Pvt Ltd.</span>
-                                    802/8th floor. 93 east, <br />
-                                    Opp. Nand Bhuvan Industrial Estate,<br />
-                                    Above Burger King, Mahakali Caves Road,<br />
-                                    Andheri East, Mumbai: 400093
+                                <MapPin className="w-5 h-5 text-[#6b7280] flex-shrink-0 mt-1 stroke-[1.5]" />
+                                <span className="font-sans text-[#6b7280] text-sm font-light leading-relaxed max-w-[280px]">
+                                    <strong className="text-[#1a1a1a] font-medium block mb-1">Univ Diam</strong>
+                                    8717 Liberty Avenue, Suite 207<br />
+                                    Pittsburgh, PA 15221
                                 </span>
                             </div>
                         </div>
 
                         {/* Social Icons - Clean & Minimal */}
-                        <div className="flex items-center gap-6 pt-8 border-t border-[#e2ddd8]">
-                            <span className="text-[#8c857d] font-sans text-xs tracking-[0.15em] uppercase">Connect</span>
-                            <div className="w-8 h-[1px] bg-[#e2ddd8]" />
-                            <a href="#" className="p-2 border border-[#e2ddd8] rounded-full text-[#655f59] hover:text-[#D4AF37] hover:border-[#D4AF37] transition-all bg-white/50">
+                        <div className="flex items-center gap-6 pt-8 border-t border-[#e5e7eb]">
+                            <span className="text-[#6b7280] font-sans text-xs tracking-[0.15em] uppercase">Connect</span>
+                            <div className="w-8 h-[1px] bg-[#e5e7eb]" />
+                            <a href="#" className="p-2 border border-[#e5e7eb] rounded-full text-[#6b7280] hover:text-[#E6552E] hover:border-[#E6552E] transition-all bg-white/50">
                                 <Instagram className="w-4 h-4" strokeWidth={1.5} />
                             </a>
-                            <a href="#" className="p-2 border border-[#e2ddd8] rounded-full text-[#655f59] hover:text-[#D4AF37] hover:border-[#D4AF37] transition-all bg-white/50">
+                            <a href="#" className="p-2 border border-[#e5e7eb] rounded-full text-[#6b7280] hover:text-[#E6552E] hover:border-[#E6552E] transition-all bg-white/50">
                                 <Linkedin className="w-4 h-4" strokeWidth={1.5} />
                             </a>
                         </div>
                     </div>
 
                     {/* RIGHT COLUMN: Contact Form */}
-                    <div className="w-full bg-white p-10 shadow-sm border border-[#e2ddd8]">
+                    <div className="w-full bg-white p-10 shadow-sm border border-[#e5e7eb]">
                         <div className="mb-10 flex items-center justify-between">
                             <h3
-                                className="font-serif text-3xl text-[#2a2725] font-normal"
+                                className="font-serif text-2xl text-[#1a1a1a] font-normal"
                             >
                                 Project Inquiry
                             </h3>
-                            <ArrowRight className="w-5 h-5 text-[#D4AF37] stroke-[1]" />
+                            <ArrowRight className="w-5 h-5 text-[#E6552E] stroke-[1]" />
                         </div>
 
                         {/* Form guidance */}
-                        <div className="mb-8 p-5 bg-[#F9F7F2] border border-[#e2ddd8]">
+                        <div className="mb-8 p-5 bg-[#e5e7eb] border border-[#e5e7eb]">
                             <p
-                                className="text-[#655f59] mb-3"
+                                className="text-[#6b7280] mb-3"
                                 style={{ fontFamily: 'Inter, sans-serif', fontSize: '13px', fontWeight: 300, lineHeight: 1.7 }}
                             >
                                 Typical inquiries include custom jewelry design, private label manufacturing, and bulk production.
                             </p>
                             <p
-                                className="text-[#8c857d]"
+                                className="text-[#6b7280]"
                                 style={{ fontFamily: 'Inter, sans-serif', fontSize: '12px', fontWeight: 300, lineHeight: 1.6 }}
                             >
                                 Not sure what to include? Share your product type, estimated quantity, and timeline — we'll take it from there.
@@ -142,39 +139,39 @@ export const ContactSection = () => {
                             {/* Input Group */}
                             <div className="space-y-6">
                                 {/* Name Input */}
-                                <div className="relative border-b border-[#e2ddd8] group">
+                                <div className="relative border-b border-[#e5e7eb] group">
                                     <input
                                         type="text"
                                         name="name"
                                         required
                                         placeholder="Full Name"
-                                        className="w-full py-4 bg-transparent focus:outline-none transition-all placeholder:text-[#a59d95] font-sans text-sm text-[#2a2725]"
+                                        className="w-full py-4 bg-transparent focus:outline-none transition-all placeholder:text-[#9ca3af] font-sans text-sm text-[#1a1a1a]"
                                     />
-                                    <div className="absolute bottom-[-1px] left-0 w-0 h-[1px] bg-[#2a2725] transition-all duration-300 group-focus-within:w-full" />
+                                    <div className="absolute bottom-[-1px] left-0 w-0 h-[1px] bg-[#1a1a1a] transition-all duration-300 group-focus-within:w-full" />
                                 </div>
 
                                 {/* Email Input */}
-                                <div className="relative border-b border-[#e2ddd8] group">
+                                <div className="relative border-b border-[#e5e7eb] group">
                                     <input
                                         type="email"
                                         name="email"
                                         required
                                         placeholder="Corporate Email"
-                                        className="w-full py-4 bg-transparent focus:outline-none transition-all placeholder:text-[#a59d95] font-sans text-sm text-[#2a2725]"
+                                        className="w-full py-4 bg-transparent focus:outline-none transition-all placeholder:text-[#9ca3af] font-sans text-sm text-[#1a1a1a]"
                                     />
-                                    <div className="absolute bottom-[-1px] left-0 w-0 h-[1px] bg-[#2a2725] transition-all duration-300 group-focus-within:w-full" />
+                                    <div className="absolute bottom-[-1px] left-0 w-0 h-[1px] bg-[#1a1a1a] transition-all duration-300 group-focus-within:w-full" />
                                 </div>
 
                                 {/* Message Textarea */}
-                                <div className="relative border-b border-[#e2ddd8] group pt-2">
+                                <div className="relative border-b border-[#e5e7eb] group pt-2">
                                     <textarea
                                         name="message"
                                         required
                                         rows={4}
                                         placeholder="Project Details & Volume Requirements"
-                                        className="w-full py-2 bg-transparent focus:outline-none transition-all placeholder:text-[#a59d95] font-sans text-sm text-[#2a2725] resize-none"
+                                        className="w-full py-2 bg-transparent focus:outline-none transition-all placeholder:text-[#9ca3af] font-sans text-sm text-[#1a1a1a] resize-none"
                                     />
-                                    <div className="absolute bottom-[-1px] left-0 w-0 h-[1px] bg-[#2a2725] transition-all duration-300 group-focus-within:w-full" />
+                                    <div className="absolute bottom-[-1px] left-0 w-0 h-[1px] bg-[#1a1a1a] transition-all duration-300 group-focus-within:w-full" />
                                 </div>
                             </div>
 
@@ -182,7 +179,7 @@ export const ContactSection = () => {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full py-5 text-white bg-[#2a2725] font-medium tracking-[0.15em] uppercase text-xs hover:bg-[#1f1d1b] transition-colors disabled:opacity-50 mt-4 flex items-center justify-center gap-3"
+                                className="w-full py-5 text-white bg-[#1a1a1a] font-medium tracking-[0.15em] uppercase text-xs hover:bg-[#1f1d1b] transition-colors disabled:opacity-50 mt-4 flex items-center justify-center gap-3"
                                 style={{ fontFamily: 'Inter, sans-serif' }}
                             >
                                 {isSubmitting ? 'Sending Request...' : 'Submit Request'}
@@ -190,7 +187,7 @@ export const ContactSection = () => {
                             </button>
 
                             <p
-                                className="text-center text-[#8c857d]"
+                                className="text-center text-[#6b7280]"
                                 style={{ fontFamily: 'Inter, sans-serif', fontSize: '12px', fontWeight: 300 }}
                             >
                                 We respond to all inquiries within 24–48 hours.
@@ -199,7 +196,7 @@ export const ContactSection = () => {
                             {/* Status Messages */}
                             <div className="h-10">
                                 {isSuccess && (
-                                    <div className="p-3 bg-[#EEEDE9] text-[#2a2725] text-center font-sans text-xs uppercase tracking-wider border border-[#e2ddd8]">
+                                    <div className="p-3 bg-[#e5e7eb] text-[#1a1a1a] text-center font-sans text-xs uppercase tracking-wider border border-[#e5e7eb]">
                                         Inquiry received — we'll be in touch within 48 hours.
                                     </div>
                                 )}

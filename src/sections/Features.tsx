@@ -57,8 +57,8 @@ export const Features: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full border-t border-[#e2ddd8]"
-      style={{ background: '#F9F7F2', padding: 'clamp(72px, 8vw, 112px) 0' }}
+      className="w-full border-t border-[#e5e7eb]"
+      style={{ background: '#FFFFFF', padding: 'clamp(72px, 8vw, 112px) 0' }}
     >
       <div className="px-8 lg:px-16 xl:px-24">
 
@@ -71,7 +71,7 @@ export const Features: React.FC = () => {
               fontWeight: 600,
               letterSpacing: '0.25em',
               textTransform: 'uppercase' as const,
-              color: '#8c857d',
+              color: '#6b7280',
             }}
           >
             Product & Service offering
@@ -79,7 +79,7 @@ export const Features: React.FC = () => {
           {/* Gold accent line — matches Service's slide-line: 40px × 1px */}
           <div
             className="mt-4"
-            style={{ width: '40px', height: '1px', background: '#D4AF37' }}
+            style={{ width: '40px', height: '1px', background: '#E6552E' }}
           />
         </div>
 
@@ -87,9 +87,9 @@ export const Features: React.FC = () => {
           className="feature-headline mb-16 lg:mb-20"
           style={{
             fontFamily: 'Inter, sans-serif',
-            fontSize: 'clamp(42px, 6vw, 76px)',
+            fontSize: 'clamp(32px, 5vw, 60px)',
             fontWeight: 400,
-            color: '#2a2725',
+            color: '#1a1a1a',
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
             maxWidth: '640px',
@@ -100,13 +100,13 @@ export const Features: React.FC = () => {
         </h2>
 
         {/* Feature grid — gap-px divider using site border colour */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-px" style={{ background: '#e2ddd8' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-px" style={{ background: '#e5e7eb' }}>
           {features.map((feature, i) => (
             <div
               key={feature.number}
               className="feature-card relative flex flex-col px-10 py-12 xl:px-14 xl:py-14 overflow-hidden cursor-default group"
               style={{
-                background: hoveredIndex === i ? '#F3F1EC' : '#F9F7F2',
+                background: hoveredIndex === i ? '#e5e7eb' : '#FFFFFF',
                 transition: 'background 0.5s ease',
               }}
               onMouseEnter={() => setHoveredIndex(i)}
@@ -131,7 +131,7 @@ export const Features: React.FC = () => {
                   top: 0,
                   bottom: 0,
                   width: '2px',
-                  background: '#D4AF37',
+                  background: '#E6552E',
                   transform: hoveredIndex === i ? 'scaleY(1)' : 'scaleY(0)',
                   transformOrigin: 'top',
                   transition: 'transform 0.5s ease',
@@ -151,10 +151,10 @@ export const Features: React.FC = () => {
                   <span
                     style={{
                       fontFamily: 'Inter, sans-serif',
-                      fontSize: 'clamp(56px, 5vw, 76px)',
+                      fontSize: 'clamp(40px, 4vw, 56px)',
                       fontWeight: 300,
                       lineHeight: 1,
-                      color: hoveredIndex === i ? '#D4AF37' : '#c9bfa0',
+                      color: hoveredIndex === i ? '#E6552E' : '#e5e7eb',
                       transition: 'color 0.5s ease',
                     }}
                   >
@@ -167,7 +167,7 @@ export const Features: React.FC = () => {
                   style={{
                     width: '40px',
                     height: '1px',
-                    background: '#D4AF37',
+                    background: '#E6552E',
                     marginBottom: '28px',
                     opacity: hoveredIndex === i ? 1 : 0.45,
                     transition: 'opacity 0.5s ease',
@@ -182,7 +182,7 @@ export const Features: React.FC = () => {
                     fontWeight: 600,
                     letterSpacing: '0.25em',
                     textTransform: 'uppercase' as const,
-                    color: hoveredIndex === i ? '#D4AF37' : '#8c857d',
+                    color: hoveredIndex === i ? '#E6552E' : '#6b7280',
                     transition: 'color 0.5s ease',
                     display: 'block',
                     marginBottom: '16px',
@@ -193,12 +193,12 @@ export const Features: React.FC = () => {
 
                 {/* Body text — left border matching Service's description style */}
                 <p
-                  className="pl-4 border-l border-[#e2ddd8]"
+                  className="pl-4 border-l border-[#e5e7eb]"
                   style={{
                     fontFamily: 'Inter, sans-serif',
-                    fontSize: '16px',
+                    fontSize: '14px',
                     fontWeight: 300,
-                    color: hoveredIndex === i ? '#2a2725' : '#655f59',
+                    color: hoveredIndex === i ? '#1a1a1a' : '#6b7280',
                     lineHeight: 1.8,
                     transition: 'color 0.5s ease',
                     flex: 1,
@@ -216,7 +216,7 @@ export const Features: React.FC = () => {
                     transition: 'opacity 0.5s ease, transform 0.5s ease',
                   }}
                 >
-                  <div className="flex items-center gap-4 text-[#D4AF37] pb-2 border-b border-[#D4AF37]/40 w-fit">
+                  <div className="flex items-center gap-4 text-[#E6552E] pb-2 border-b border-[#E6552E]/40 w-fit">
                     <span
                       style={{
                         fontFamily: 'Inter, sans-serif',

@@ -64,7 +64,7 @@ export const AboutUs = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative w-full py-24 md:py-32 px-8 md:px-16 lg:px-24 xl:px-32 bg-[#F9F7F2] overflow-hidden"
+            className="relative w-full py-24 md:py-32 px-8 md:px-16 lg:px-24 xl:px-32 bg-white overflow-hidden"
             id="about-us"
         >
             <div className="max-w-7xl mx-auto">
@@ -75,15 +75,15 @@ export const AboutUs = () => {
                     {/* Content Left */}
                     <div ref={textRef} className="w-full md:w-1/2 space-y-8">
                         <div className="space-y-4">
-                            <span className="text-[#D4AF37] font-semibold tracking-[0.2em] text-sm uppercase">
+                            <span className="text-[#E6552E] font-semibold tracking-[0.2em] text-sm uppercase">
                                 Why We Exist
                             </span>
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl text-[#2a2725] leading-tight">
+                            <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#1a1a1a] leading-tight">
                                 About <br /> Univ Diam
                             </h2>
                         </div>
 
-                        <div className="space-y-6 text-[#655f59] text-lg font-light leading-relaxed">
+                        <div className="space-y-6 text-[#6b7280] text-base font-light leading-relaxed">
                             <p>
                                 Independent jewelry retailers are often caught between high design expectations and unreliable manufacturing. Timelines slip. Quality varies. And most manufacturers prioritize large-volume clients, leaving smaller brands without the support they deserve.
                             </p>
@@ -91,8 +91,8 @@ export const AboutUs = () => {
                                 Univ Diam was built to change that.
                             </p>
                             <p>
-                                We act as the <span className="text-[#2a2725] font-medium">design and manufacturing team</span> most retailers don't have in-house — delivering consistency, flexibility, and control across every stage of production through our{' '}
-                                <span className="text-[#2a2725] font-medium">Design–Manufacture–Deliver</span> model.
+                                We act as the <span className="text-[#1a1a1a] font-medium">design and manufacturing team</span> most retailers don't have in-house — delivering consistency, flexibility, and control across every stage of production through our{' '}
+                                <span className="text-[#1a1a1a] font-medium">Design–Manufacture–Deliver</span> model.
                             </p>
                             <p>
                                 We work closely with each partner, integrating into their design and production process rather than operating as a transactional vendor.
@@ -114,18 +114,18 @@ export const AboutUs = () => {
                             <div
                                 className="absolute inset-0 pointer-events-none"
                                 style={{
-                                    background: 'linear-gradient(to right, #F9F7F2 0%, rgba(249, 247, 242, 0) 20%, rgba(249, 247, 242, 0) 80%, #F9F7F2 100%), linear-gradient(to bottom, #F9F7F2 0%, rgba(249, 247, 242, 0) 15%, rgba(249, 247, 242, 0) 85%, #F9F7F2 100%)'
+                                    background: 'linear-gradient(to right, #FFFFFF 0%, rgba(255,255,255,0) 20%, rgba(255,255,255,0) 80%, #FFFFFF 100%), linear-gradient(to bottom, #FFFFFF 0%, rgba(255,255,255,0) 15%, rgba(255,255,255,0) 85%, #FFFFFF 100%)'
                                 }}
                             />
                             <div className="absolute inset-4 border border-white/20 pointer-events-none" />
                         </div>
-                        <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-[#D4AF37]/10 -z-10" />
-                        <div className="absolute -top-8 -right-8 w-24 h-24 border-r border-t border-[#D4AF37]/30 -z-10" />
+                        <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-[#E6552E]/10 -z-10" />
+                        <div className="absolute -top-8 -right-8 w-24 h-24 border-r border-t border-[#E6552E]/30 -z-10" />
                     </div>
                 </div>
 
                 {/* Who We Work With */}
-                <div className="border-t border-[#e2ddd8] pt-16 md:pt-20">
+                <div className="border-t border-[#e5e7eb] pt-16 md:pt-20">
                     <div className="mb-12">
                         <span
                             style={{
@@ -134,24 +134,24 @@ export const AboutUs = () => {
                                 fontWeight: 600,
                                 letterSpacing: '0.25em',
                                 textTransform: 'uppercase',
-                                color: '#8c857d',
+                                color: '#6b7280',
                             }}
                         >
                             Who we work with
                         </span>
-                        <div className="mt-4" style={{ width: '40px', height: '1px', background: '#D4AF37' }} />
+                        <div className="mt-4" style={{ width: '40px', height: '1px', background: '#E6552E' }} />
                     </div>
 
-                    <div ref={partnersRef} className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ background: '#e2ddd8' }}>
+                    <div ref={partnersRef} className="grid grid-cols-1 md:grid-cols-3 gap-px" style={{ background: '#e5e7eb' }}>
                         {partners.map((p) => (
-                            <div key={p.label} className="bg-[#F9F7F2] px-8 py-10">
+                            <div key={p.label} className="bg-white px-8 py-10">
                                 <h3
                                     className="mb-3"
                                     style={{
                                         fontFamily: 'Inter, sans-serif',
-                                        fontSize: 'clamp(18px, 1.8vw, 22px)',
+                                        fontSize: 'clamp(15px, 1.5vw, 18px)',
                                         fontWeight: 400,
-                                        color: '#2a2725',
+                                        color: '#1a1a1a',
                                         lineHeight: 1.3,
                                     }}
                                 >
@@ -160,9 +160,9 @@ export const AboutUs = () => {
                                 <p
                                     style={{
                                         fontFamily: 'Inter, sans-serif',
-                                        fontSize: '15px',
+                                        fontSize: '13px',
                                         fontWeight: 300,
-                                        color: '#655f59',
+                                        color: '#6b7280',
                                         lineHeight: 1.75,
                                     }}
                                 >
@@ -176,9 +176,9 @@ export const AboutUs = () => {
                         className="mt-10"
                         style={{
                             fontFamily: 'Inter, sans-serif',
-                            fontSize: '15px',
+                            fontSize: '13px',
                             fontWeight: 300,
-                            color: '#8c857d',
+                            color: '#6b7280',
                             fontStyle: 'italic',
                         }}
                     >

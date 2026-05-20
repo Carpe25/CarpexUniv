@@ -16,11 +16,11 @@ export const Footer: React.FC<FooterProps> = ({
 }) => {
     return (
         <footer
-            className="relative z-10 flex gap-2.5 w-full bg-[#F9F7F2]"
+            className="relative z-10 flex gap-2.5 w-full bg-white"
             style={{
-                background: '#F9F7F2',
+                background: '#FFFFFF',
                 // Muted border top for sophisticated definition
-                borderTop: '1px solid rgba(140, 133, 125, 0.1)',
+                borderTop: '1px solid rgba(26, 26, 26, 0.08)',
                 padding: 'clamp(1rem,4vw,2.5rem)',
                 paddingBottom: 'clamp(1rem,4vw,2.5rem)',
             }}
@@ -44,18 +44,18 @@ export const Footer: React.FC<FooterProps> = ({
                         <div
                             className="absolute top-0 left-0 w-full h-[1px] pointer-events-none"
                             style={{
-                                background: 'rgba(42, 39, 37, 0.1)' // #2a2725 at 10%
+                                background: 'rgba(26, 26, 26, 0.08)' // #1a1a1a at 10%
                             }}
                         />
 
                         {/* Animated Progress line */}
                         <div
-                            className="absolute left-0 h-[1.5px] pointer-events-none shadow-[0_0_8px_rgba(212,175,55,0.4)]"
+                            className="absolute left-0 h-[1.5px] pointer-events-none shadow-[0_0_8px_rgba(230,85,46,0.4)]"
                             style={{
                                 width: progressWidth,
                                 top: '-0.25px',
                                 transition: 'width 75ms linear',
-                                background: '#D4AF37', // Gold 
+                                background: '#E6552E', // Gold 
                             }}
                         />
 
@@ -65,7 +65,7 @@ export const Footer: React.FC<FooterProps> = ({
                             <span
                                 className="block mb-2 font-serif italic"
                                 style={{
-                                    color: isActive ? '#2a2725' : '#8c857d',
+                                    color: isActive ? '#1a1a1a' : '#6b7280',
                                     fontSize: isActive ? '16px' : '14px',
                                     transition: 'all 0.3s ease'
                                 }}
@@ -78,7 +78,7 @@ export const Footer: React.FC<FooterProps> = ({
                                 <span
                                     className="block transition-all duration-500 transform"
                                     style={{
-                                        color: isActive ? '#2a2725' : '#8c857d',
+                                        color: isActive ? '#1a1a1a' : '#6b7280',
                                         fontFamily: 'Inter, sans-serif',
                                         fontSize: isActive ? '13px' : '11px',
                                         fontWeight: isActive ? 500 : 400,
@@ -98,7 +98,7 @@ export const Footer: React.FC<FooterProps> = ({
             <div
                 className="lg:hidden absolute right-4 bottom-6 transition-all duration-300"
                 style={{
-                    color: '#2a2725',
+                    color: '#1a1a1a',
                     fontFamily: 'Inter, sans-serif',
                     fontSize: '11px',
                     fontWeight: 500,
