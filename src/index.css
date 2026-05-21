@@ -1,29 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @import "tailwindcss";
 
-/* Custom Theme Configuration for Tailwind v4 */
+/* Design Tokens — single source of truth (Tailwind v4) */
 @theme {
-  /* Primary Colors */
-  --color-cream: #fbf9f6;
-  --color-peach: #E9DCD3;
-  --color-ivory: #f3f4f6;
-  --color-primary: #E6552E;
-  --color-mocha: #1a1a1a;
-  --color-mocha-light: #6b7280;
+  /* Surfaces — three deliberate neutrals, used everywhere */
+  --color-cream: #fbfaf7;
+  --color-sand: #decabe;
+  --color-mist: #f4f1ed;
 
-  /* Legacy dark color */
-  --color-dark: #0a0a0a;
+  /* Brand */
+  --color-primary: #e6552e;
+  --color-ink: #0a0a0a;
 
   /* Fonts */
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', sans-serif;
 
-  /* Custom Spacing for Section Padding */
-  --spacing-section-x: clamp(1rem, 4vw, 2.5rem);
-  --spacing-section-y: clamp(80px, 10vw, 160px);
+  /* Section rhythm */
+  --spacing-section-y: 96px;
 
-  /* Custom Easing Function */
+  /* Easing */
   --ease-cubic-bezier: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
@@ -41,46 +37,11 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-sans);
   font-weight: 400;
   line-height: 1.6;
   color: #1a1a1a;
-  background-color: #FFFFFF;
-}
-
-/* Typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Inter', sans-serif;
-}
-
-/* Navigation Links Style */
-.nav-link {
-  font-family: 'Inter', sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* Button Styles - No border radius for sharp modern look */
-.btn-primary {
-  background-color: #E6552E;
-  color: #FFFFFF;
-  border-radius: 0;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #c9441e;
+  background-color: #ffffff;
 }
 
 /* Video elements */
@@ -88,106 +49,4 @@ video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-@theme {
-  /* Existing theme variables */
-  --color-cream: #f9f9f9;
-  --color-ivory: #f3f4f6;
-  --color-primary: #E6552E;
-  --color-mocha: #1a1a1a;
-  --color-mocha-light: #6b7280;
-  --color-dark: #0a0a0a;
-
-  /* New Animation Durations */
-  --animate-float: float 6s ease-in-out infinite;
-  --animate-shimmer: shimmer 3s infinite linear;
-}
-
-/* Hero Section Specific Animations */
-@layer components {
-  .hero-container {
-    perspective: 1200px;
-    /* Gives 3D depth to the ring */
-  }
-
-  .hero-right-content {
-    transform-style: preserve-3d;
-    transition: transform 0.5s ease-out;
-  }
-
-  /* The Diamond "Gleam" Effect */
-  .hero-diamond {
-    position: absolute;
-    transition: filter 0.3s ease;
-    will-change: transform, filter;
-  }
-
-  .hero-diamond::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0) 40%,
-        rgba(255, 255, 255, 0.4) 50%,
-        rgba(255, 255, 255, 0) 60%,
-        transparent 100%);
-    transform: rotate(45deg);
-    animation: shimmer 4s infinite;
-    pointer-events: none;
-  }
-
-  /* Ring Glow Atmosphere */
-  .ring-glow {
-    filter: blur(40px);
-    opacity: 0.6;
-    animation: pulse-glow 8s ease-in-out infinite;
-  }
-}
-
-/* Keyframes for that "Video" feel */
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-15px) rotate(2deg);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-150%) rotate(45deg);
-  }
-
-  100% {
-    transform: translateX(150%) rotate(45deg);
-  }
-}
-
-@keyframes pulse-glow {
-
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.4;
-  }
-
-  50% {
-    transform: scale(1.1);
-    opacity: 0.7;
-  }
-}
-
-/* Optimization for the Rotating Ring to look 3D */
-.hero-ring-3d {
-  transform: rotateX(20deg);
-  /* Tilts the ring slightly for perspective */
 }
