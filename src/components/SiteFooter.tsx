@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import { containerClass, wordmarkClass } from '../styles'
+import { containerClass } from '../styles'
 
 const columnHeadingClass =
   'text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-950'

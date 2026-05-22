@@ -7,18 +7,7 @@ import {
   bodyClass,
 } from '../styles'
 
-const teamMembers = [
-  {
-    name: 'Girish Jain',
-    title: 'Director of Strategy',
-    image: '/team/girish.jpg',
-  },
-  {
-    name: 'Rushabh Doshi',
-    title: 'Director of Strategy',
-    image: '/team/rushabh.jpg',
-  },
-]
+
 
 const About = () => {
   return (
