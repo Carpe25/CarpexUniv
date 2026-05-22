@@ -17,18 +17,7 @@ const SiteFooter = () => {
         {/* Brand */}
         <div className="flex flex-col gap-6">
           <div className="flex items-center gap-2.5">
-            <svg
-              className="h-5 w-5 text-neutral-950"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" />
-            </svg>
-
-            <span className={`${wordmarkClass} text-neutral-950`}>
-              Univ Diam
-            </span>
+            <img src="/UD.png" alt="Univ Diam" className='h-10 w-auto' />
           </div>
 
           {/* <p className="max-w-xs text-sm leading-[1.75] text-neutral-600">

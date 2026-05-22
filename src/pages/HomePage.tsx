@@ -104,7 +104,7 @@ const HomePage = () => {
       <section id="about" ref={aboutRef} className={`overflow-hidden bg-white ${sectionClass}`}>
         <div className={`${containerClass} grid grid-cols-1 items-start gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20`}>
           <div className="about-reveal max-w-md">
-            <p className={`${eyebrowClass} mb-4`}>About</p>
+            <p className={`${eyebrowClass} mb-4`}>Who we are</p>
             <h2 className={headingClass}>About Univ Diam</h2>
           </div>
 
