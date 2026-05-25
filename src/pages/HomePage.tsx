@@ -90,10 +90,20 @@ const HomePage = () => {
 
   return (
     <main>
-      <section id="hero" className="relative h-screen min-h-[620px] w-full overflow-hidden bg-neutral-950">
+      <section id="hero" className="relative w-full h-auto sm:h-screen sm:min-h-[620px] overflow-hidden bg-neutral-950">
+        {/* Desktop Landscape Video */}
         <video
-          className="h-full w-full object-cover"
+          className="hidden sm:block h-full w-full object-cover"
           src="/hero.mp4"
+          loop
+          muted
+          autoPlay
+          playsInline
+        />
+        {/* Mobile Portrait Video */}
+        <video
+          className="block sm:hidden w-full h-auto"
+          src="/ud potrait.mp4"
           loop
           muted
           autoPlay
@@ -173,41 +183,44 @@ const HomePage = () => {
           </p>
         </div>
 
-        <div className="client-card-container grid w-full grid-cols-1 gap-6 md:grid-cols-3">
-          <div className="client-card-animated flex min-h-[265px] cursor-default flex-col border border-neutral-200 bg-cream p-7 transition-colors duration-300 hover:bg-white lg:p-8">
-            <div className="flex h-12 w-12 items-center justify-center bg-black text-white">
-              <Store className="h-5 w-5 stroke-[1.75]" />
+        <div className="client-card-container grid w-full grid-cols-1 gap-14 sm:grid-cols-3 sm:gap-8 lg:gap-16">
+          {/* Independent Jewelry Retailers */}
+          <div className="group client-card-animated flex flex-col items-center text-center cursor-default">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-neutral-50 transition-colors duration-300 group-hover:bg-neutral-100/80">
+              <Store className="h-7 w-7 text-neutral-800 transition-transform duration-300 group-hover:scale-105" strokeWidth={1.2} />
             </div>
-            <h3 className="mt-8 font-sans text-xl font-semibold leading-snug text-neutral-950">
+            <h3 className="mt-6 text-lg font-semibold tracking-[-0.01em] text-neutral-950 sm:text-xl">
               Independent Jewelry Retailers
             </h3>
-            <p className="mt-4 text-sm leading-[1.65] text-neutral-600 sm:text-base">
+            <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
               From sourcing to display, we help independent retailers with a
               curated stock, custom orders, and manufacturing support.
             </p>
           </div>
 
-          <div className="client-card-animated flex min-h-[265px] cursor-default flex-col border border-neutral-200 bg-cream p-7 transition-colors duration-300 hover:bg-white lg:p-8">
-            <div className="flex h-12 w-12 items-center justify-center bg-black text-white">
-              <ShoppingCart className="h-5 w-5 stroke-[1.75]" />
+          {/* E-Tail Jewelry Partners */}
+          <div className="group client-card-animated flex flex-col items-center text-center cursor-default">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-neutral-50 transition-colors duration-300 group-hover:bg-neutral-100/80">
+              <ShoppingCart className="h-7 w-7 text-neutral-800 transition-transform duration-300 group-hover:scale-105" strokeWidth={1.2} />
             </div>
-            <h3 className="mt-8 font-sans text-xl font-semibold leading-snug text-neutral-950">
+            <h3 className="mt-6 text-lg font-semibold tracking-[-0.01em] text-neutral-950 sm:text-xl">
               E-Tail Jewelry Partners
             </h3>
-            <p className="mt-4 text-sm leading-[1.65] text-neutral-600 sm:text-base">
+            <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
               We power e-tailers with reliable sourcing, order management,
               delivery support with the flexibility to scale.
             </p>
           </div>
 
-          <div className="client-card-animated flex min-h-[265px] cursor-default flex-col border border-neutral-200 bg-cream p-7 transition-colors duration-300 hover:bg-white lg:p-8">
-            <div className="flex h-12 w-12 items-center justify-center bg-black text-white">
-              <Sparkles className="h-5 w-5 stroke-[1.75]" />
+          {/* Private Jewelry Concierge */}
+          <div className="group client-card-animated flex flex-col items-center text-center cursor-default">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-neutral-50 transition-colors duration-300 group-hover:bg-neutral-100/80">
+              <Sparkles className="h-7 w-7 text-neutral-800 transition-transform duration-300 group-hover:scale-105" strokeWidth={1.2} />
             </div>
-            <h3 className="mt-8 font-sans text-xl font-semibold leading-snug text-neutral-950">
+            <h3 className="mt-6 text-lg font-semibold tracking-[-0.01em] text-neutral-950 sm:text-xl">
               Private Jewelry Concierge
             </h3>
-            <p className="mt-4 text-sm leading-[1.65] text-neutral-600 sm:text-base">
+            <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
               Bespoke commissions and custom manufacturing for jewelry
               consultants, influencers and industry professionals.
             </p>

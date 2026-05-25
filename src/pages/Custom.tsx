@@ -55,8 +55,8 @@ const Custom = () => {
 
       {/* CRAFTSMANSHIP IMAGE */}
       <section className="bg-white pb-8 sm:pb-12 lg:pb-16">
-        <div className="">
-          <div className="overflow-hidden bg-mist">
+        <div className={`${containerClass}`}>
+          <div className="overflow-hidden rounded-md">
             <video
               autoPlay
               muted

@@ -10,42 +10,30 @@ import {
 
 const catalogPieces = [
   {
+    src: './product2.jpeg',
+    alt: 'Diamond',
+  },
+  {
     src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003557320&attachment_id=1105156000003557324',
     alt: 'Diamond floral necklace on warm satin',
   },
   {
-    src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003108517&attachment_id=1105156000004861217',
+    src: './product1.jpeg',
     alt: 'Diamond eternity ring on satin',
-  },
-  {
-    src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003108005&attachment_id=1105156000003260346',
-    alt: 'Diamond',
   },
   {
     src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003087221&attachment_id=1105156000004861287',
     alt: 'Diamond floral necklace on white satin',
   },
   {
-    src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003108517&attachment_id=1105156000004861217',
-    alt: 'Diamond eternity ring on satin',
-  },
-  {
     src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003108005&attachment_id=1105156000003260346',
     alt: 'Diamond',
-  },
-  {
-    src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003557320&attachment_id=1105156000003557324',
-    alt: 'Diamond floral necklace on warm satin',
   },
   {
     src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003108517&attachment_id=1105156000004861217',
     alt: 'Diamond eternity ring on satin',
   },
-  {
-    src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003108005&attachment_id=1105156000003260346',
-    alt: 'Diamond',
-  },
-];
+]
 
 const CatalogMarquee = () => {
   const trackRef = useRef<HTMLDivElement>(null)
@@ -54,17 +42,15 @@ const CatalogMarquee = () => {
     const track = trackRef.current
     if (!track) return
 
-    // The track renders catalogPieces twice, so one loop = half the width.
     let loopWidth = track.scrollWidth / 2
     let x = 0
     let dragging = false
     let pointerId: number | null = null
     let lastPointerX = 0
-    const speed = 60 // px per second of auto-scroll
+    const speed = 60
 
     const wrap = (value: number) => {
       if (loopWidth <= 0) return value
-      // keep x within (-loopWidth, 0] for a seamless loop
       return ((value % loopWidth) - loopWidth) % loopWidth
     }
 
@@ -123,22 +109,24 @@ const CatalogMarquee = () => {
   }, [])
 
   return (
-    <section className="relative overflow-hidden bg-white">
+    <section className="relative overflow-hidden">
       <div
         ref={trackRef}
-        className="flex min-h-[420px] cursor-grab touch-pan-y select-none gap-px bg-neutral-200 lg:min-h-[520px]"
+        className="flex min-h-[420px] cursor-grab touch-pan-y select-none gap-px lg:min-h-[520px]"
       >
         {[...catalogPieces, ...catalogPieces].map((piece, index) => (
           <article
             key={`${piece.src}-${index}`}
-            className="flex min-h-[360px] w-[80vw] shrink-0 items-center justify-center overflow-hidden bg-mist sm:min-h-[520px] sm:w-[33.333vw]"
+            className="flex min-h-[360px] w-[80vw] shrink-0 items-center justify-center sm:min-h-[520px] sm:w-[33.333vw]"
           >
-            <img
-              src={piece.src}
-              alt={piece.alt}
-              draggable={false}
-              className="h-full w-full object-cover"
-            />
+            <div className="h-full w-full p-4 sm:p-6">
+              <img
+                src={piece.src}
+                alt={piece.alt}
+                draggable={false}
+                className="h-full w-full object-contain"
+              />
+            </div>
           </article>
         ))}
       </div>
@@ -165,26 +153,144 @@ const Catalog = () => {
       </section>
 
       <section className={`bg-white ${sectionClass}`}>
-        <div className={`${containerClass} grid gap-12 lg:grid-cols-[0.52fr_0.48fr] lg:gap-20`}>
+        <div className={`${containerClass} grid gap-12 lg:grid-cols-[0.52fr_0.48fr] lg:gap-20 items-start`}>
           <div className="max-w-[690px]">
             <p className={`${eyebrowClass} mb-4`}>Catalog</p>
+
             <p className={subheadingClass}>
               A curated catalog that brings together designs crafted with both
               desirability and wearability in mind.
             </p>
           </div>
 
-          <div className="max-w-[590px] pt-1 text-base leading-[1.7] text-neutral-600 sm:text-lg lg:pt-0 lg:text-[20px]">
-            <p>
-              Curated catalog with latest designs, customizable options, and
-              flexible ordering with no MOQ requirements.
-            </p>
+          <div className="max-w-[590px] pt-1">
+            <ul className="space-y-7 text-base leading-[1.7] text-neutral-600 sm:text-lg lg:text-[19px]">
+              <li className="flex items-start gap-4">
+                <span className="mt-3.5 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-400" />
+                <span>
+                  Curated ready collections balancing everyday classics with the
+                  latest in-demand jewelry styles.
+                </span>
+              </li>
+
+              <li className="flex items-start gap-4">
+                <span className="mt-3.5 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-400" />
+                <span>
+                  Digital catalog with live pricing, seamless ordering,
+                  customizable options, and no MOQ requirements.
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
 
       <CatalogMarquee />
 
+      {/* Showcase the Catalog */}
+      <section className="border-t border-neutral-100 bg-white py-20 sm:py-24 lg:py-28">
+        <div className={`${containerClass} flex flex-col items-center`}>
+          <div className="mb-20 text-center">
+            <p className={`${eyebrowClass} mb-4`}>Service</p>
+            <h2 className="text-[28px] font-medium leading-[1.2] tracking-[-0.01em] text-neutral-950 sm:text-[34px] lg:text-[40px]">
+              Showcase the Catalog
+            </h2>
+
+            <p className="mt-3 text-base text-neutral-500 sm:text-lg">
+              How can you use the catalog in your retail journey
+            </p>
+          </div>
+
+          <div className="grid w-full grid-cols-1 gap-14 sm:grid-cols-3 sm:gap-8 lg:gap-16">
+            {/* Live Inventory */}
+            <div className="group flex flex-col items-center text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-neutral-50 transition-colors duration-300 group-hover:bg-neutral-100/80">
+                <svg
+                  className="h-9 w-9 text-neutral-800 transition-transform duration-300 group-hover:scale-105"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                  viewBox="0 0 24 24"
+                >
+                  <rect x="2" y="3" width="20" height="13" rx="1.5" />
+                  <path d="M9 21h6M12 16v5" />
+                  <line x1="2" y1="7" x2="22" y2="7" />
+                  <line x1="8" y1="7" x2="8" y2="16" />
+                  <rect x="11" y="9" width="3" height="2" rx="0.5" />
+                  <rect x="16" y="9" width="3" height="2" rx="0.5" />
+                  <rect x="11" y="13" width="3" height="2" rx="0.5" />
+                  <rect x="16" y="13" width="3" height="2" rx="0.5" />
+                </svg>
+              </div>
+
+              <h3 className="mt-6 text-lg font-semibold tracking-[-0.01em] text-neutral-950 sm:text-xl">
+                Live Inventory
+              </h3>
+
+              <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
+                Integrate ready inventory into your website or e-commerce
+                platform seamlessly.
+              </p>
+            </div>
+
+            {/* Digital Catalog */}
+            <div className="group flex flex-col items-center text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-neutral-50 transition-colors duration-300 group-hover:bg-neutral-100/80">
+                <svg
+                  className="h-9 w-9 text-neutral-800 transition-transform duration-300 group-hover:scale-105"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M3 6l6-3 6 3 6-3v15l-6 3-6-3-6 3V6z" />
+                  <line x1="9" y1="3" x2="9" y2="21" />
+                  <line x1="15" y1="3" x2="15" y2="21" />
+                </svg>
+              </div>
+
+              <h3 className="mt-6 text-lg font-semibold tracking-[-0.01em] text-neutral-950 sm:text-xl">
+                Digital Catalog
+              </h3>
+
+              <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
+                Access curated digital catalog for easy sharing, discovery, and
+                selling.
+              </p>
+            </div>
+
+            {/* Sample Product Line */}
+            <div className="group flex flex-col items-center text-center">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-neutral-50 transition-colors duration-300 group-hover:bg-neutral-100/80">
+                <svg
+                  className="h-9 w-9 text-neutral-800 transition-transform duration-300 group-hover:scale-105"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M16 14c0-2.2-1.8-4-4-4s-4 1.8-4 4c0 3 2 4.5 4 4.5s4-1.5 4-4.5z" />
+                  <path d="M6 20h12a2 2 0 0 0 2-2c0-3-3.5-4-8-4s-8 1-8 4a2 2 0 0 0 2 2z" />
+                  <path
+                    d="M9.5 12.5a3.5 3.5 0 0 0 5 0"
+                    strokeWidth="1.2"
+                  />
+                  <circle cx="12" cy="15" r="1.2" fill="currentColor" />
+                </svg>
+              </div>
+
+              <h3 className="mt-6 text-lg font-semibold tracking-[-0.01em] text-neutral-950 sm:text-xl">
+                Sample Product Line
+              </h3>
+
+              <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
+                Keep a selected sample line in-store for customers to experience
+                the designs firsthand.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

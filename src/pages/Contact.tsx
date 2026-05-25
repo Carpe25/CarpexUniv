@@ -13,19 +13,19 @@ const contactDetails = [
     {
         Icon: MapPin,
         label: 'Headquarters',
-        value: 'Suite 500, Luxury District, New York, NY 10001',
+        value: '717 Liberty Avenue, Suite 207 Pittsburgh, PA 15222',
     },
     {
         Icon: Mail,
         label: 'Email',
-        value: 'partners@univdiam.com',
-        href: 'mailto:partners@univdiam.com',
+        value: 'hello@univdiam.com',
+        href: 'mailto:hello@univdiam.com',
     },
     {
         Icon: Phone,
         label: 'Phone',
-        value: '+1 (212) 555-0199',
-        href: 'tel:+12125550199',
+        value: '+1 (412) 391-9650',
+        href: 'tel:+14123919650',
     },
 ]
 

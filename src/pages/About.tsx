@@ -79,7 +79,7 @@ const About = () => {
               </article>
             ))}
           </div> */}
-          <div className='w-full'>
+          <div className='w-full rounded-md overflow-hidden'>
             <img src="https://images.pexels.com/photos/7414209/pexels-photo-7414209.jpeg" alt="" />
             <div className='py-4'>
               <h3 className="text-md text-neutral-950">Girish Jain & Rushabh Doshi</h3>
