@@ -4,7 +4,6 @@ import {
   containerClass,
   sectionClass,
   heroHeadingClass,
-  headingClass,
   subheadingClass,
   eyebrowClass,
   btnPrimary,
