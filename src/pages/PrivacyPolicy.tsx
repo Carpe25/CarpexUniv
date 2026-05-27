@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Shield, Clock, Lock, ArrowLeft, ArrowUp, Mail, MapPin } from 'lucide-react'
+// import { Link } from 'react-router-dom'
+// import { Shield, Clock, Lock, ArrowLeft, ArrowUp, Mail, MapPin } from 'lucide-react'
+import { ArrowUp } from 'lucide-react'
 import { containerClass, sectionClass } from '../styles'
 
 const sections = [
@@ -17,7 +18,7 @@ const PrivacyPolicy = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    
+
     const handleScroll = () => {
       // Toggle back-to-top button
       setShowScrollTop(window.scrollY > 400)
@@ -59,9 +60,9 @@ const PrivacyPolicy = () => {
   }
 
   return (
-    <main className="min-h-screen bg-cream text-neutral-900 pt-20 selection:bg-neutral-950 selection:text-white">
+    <main className="min-h-screen bg-cream text-neutral-900 selection:bg-neutral-950 selection:text-white">
       {/* Premium Hero / Header Section */}
-      <section className="relative border-b border-neutral-200/60 bg-cream py-16 sm:py-20 lg:py-24">
+      {/* <section className="relative border-b border-neutral-200/60 bg-cream py-16 sm:py-20 lg:py-24">
         <div className="absolute inset-0 bg-[radial-gradient(#decabe_1px,transparent_1px)] [background-size:24px_24px] opacity-25" />
         <div className={`${containerClass} relative z-10 flex flex-col items-center text-center`}>
           <Link
@@ -92,12 +93,12 @@ const PrivacyPolicy = () => {
             </span>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Two-Column Premium Layout */}
       <section className={`${sectionClass} bg-white`}>
         <div className={`${containerClass} grid grid-cols-1 gap-12 lg:grid-cols-[280px_1fr] lg:gap-16`}>
-          
+
           {/* Sticky Navigation Sidebar */}
           <aside className="hidden lg:block">
             <div className="sticky top-28 flex flex-col gap-6">
@@ -111,18 +112,17 @@ const PrivacyPolicy = () => {
                     <button
                       key={sec.id}
                       onClick={() => scrollToSection(sec.id)}
-                      className={`text-left text-sm py-2.5 pl-4 -ml-[1px] border-l transition-all duration-300 ${
-                        isActive
-                          ? 'border-neutral-950 text-neutral-950 font-medium scale-[1.02] origin-left'
-                          : 'border-transparent text-neutral-500 hover:text-neutral-900'
-                      }`}
+                      className={`text-left text-sm py-2.5 pl-4 -ml-[1px] border-l transition-all duration-300 ${isActive
+                        ? 'border-neutral-950 text-neutral-950 font-medium scale-[1.02] origin-left'
+                        : 'border-transparent text-neutral-500 hover:text-neutral-900'
+                        }`}
                     >
                       {sec.label}
                     </button>
                   )
                 })}
               </nav>
-              
+
               <div className="mt-8 rounded-2xl bg-cream p-6 border border-neutral-200/50">
                 <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-neutral-950 mb-2">
                   Privacy Concerns?
@@ -142,7 +142,7 @@ const PrivacyPolicy = () => {
 
           {/* Reading Document Column */}
           <article className="max-w-[780px] prose prose-neutral lg:prose-lg text-neutral-700">
-            
+
             {/* Section: Commitment */}
             <section id="commitment" className="scroll-mt-28 mb-16 pb-12 border-b border-neutral-100">
               <h2 className="text-xl font-medium tracking-[-0.01em] text-neutral-950 sm:text-2xl mb-6 font-serif">
@@ -182,7 +182,7 @@ const PrivacyPolicy = () => {
                 <p>
                   This information reveals nothing personal about you. In fact, the only information that we automatically gather and log is as follows:
                 </p>
-                
+
                 <div className="p-6 rounded-2xl bg-cream border border-neutral-200/50 my-6">
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400 block mb-3">
                     Automatically Gathered Data Points
@@ -214,7 +214,7 @@ const PrivacyPolicy = () => {
                     </li>
                   </ul>
                 </div>
-                
+
                 <p>
                   There is absolutely nothing special about the information just described, and the practice of collecting this data has been generally standardized by virtually every Web Server on the Internet today.
                 </p>
@@ -257,7 +257,7 @@ const PrivacyPolicy = () => {
                 <p>
                   We may also request your e-mail address or mailing address for the purposes of conducting a survey, adding you to our mailing list, or by your request to have someone contact you for additional information. Whenever we request the identity of a visitor, we will clearly indicate the purpose of the inquiry before the information is requested.
                 </p>
-                
+
                 <div className="p-6 rounded-2xl bg-neutral-950 text-white my-6 border border-neutral-800 shadow-[0_12px_30px_rgba(0,0,0,0.04)]">
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-400 block mb-2">
                     Strict Contact Integrity
@@ -288,7 +288,7 @@ const PrivacyPolicy = () => {
                 <p>
                   Universal Diamonds will disclose your personal information or any of its log file information when required by law or in the good-faith belief that such actions are necessary to:
                 </p>
-                
+
                 <ol className="list-decimal pl-5 space-y-3.5 text-neutral-600 my-4">
                   <li>Conform to the edicts of the law or comply with a legal process served on Universal Diamonds.</li>
                   <li>Protect and defend the rights or property of Universal Diamonds, or visitors of Universal Diamonds.</li>
@@ -313,7 +313,7 @@ const PrivacyPolicy = () => {
       </section>
 
       {/* Corporate Locations (Global Footprint) */}
-      <section className="bg-cream border-t border-neutral-200/60 py-16">
+      {/* <section className="bg-cream border-t border-neutral-200/60 py-16">
         <div className={containerClass}>
           <div className="mb-10 text-center">
             <span className="text-[10px] font-bold uppercase tracking-[0.24em] text-neutral-400">
@@ -324,7 +324,6 @@ const PrivacyPolicy = () => {
             </h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {/* Pittsburgh Office */}
             <div className="p-6 rounded-2xl bg-white border border-neutral-200/50 shadow-sm">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 block mb-3">
                 Pittsburgh, United States
@@ -346,7 +345,6 @@ const PrivacyPolicy = () => {
               </ul>
             </div>
 
-            {/* Mumbai Office */}
             <div className="p-6 rounded-2xl bg-white border border-neutral-200/50 shadow-sm">
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 block mb-3">
                 Mumbai, India
@@ -369,7 +367,7 @@ const PrivacyPolicy = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Footer Meta / Date */}
       <section className="bg-cream border-t border-neutral-200/60 py-12 text-center text-xs text-neutral-400">

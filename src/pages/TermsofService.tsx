@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { Scale, Shield, Clock, ArrowLeft, ArrowUp } from 'lucide-react'
+// import { Link } from 'react-router-dom'
+// import { Scale, Shield, Clock, ArrowLeft, ArrowUp } from 'lucide-react'
+import { ArrowUp } from 'lucide-react'
 import { containerClass, sectionClass } from '../styles'
 
 const sections = [
@@ -21,7 +22,7 @@ const TermsofService = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0)
-    
+
     const handleScroll = () => {
       // Toggle back-to-top button
       setShowScrollTop(window.scrollY > 400)
@@ -63,9 +64,9 @@ const TermsofService = () => {
   }
 
   return (
-    <main className="min-h-screen bg-cream text-neutral-900 pt-20 selection:bg-neutral-950 selection:text-white">
+    <main className="min-h-screen bg-cream text-neutral-900 selection:bg-neutral-950 selection:text-white">
       {/* Premium Hero / Header Section */}
-      <section className="relative border-b border-neutral-200/60 bg-cream py-16 sm:py-20 lg:py-24">
+      {/* <section className="relative border-b border-neutral-200/60 bg-cream py-16 sm:py-20 lg:py-24">
         <div className="absolute inset-0 bg-[radial-gradient(#decabe_1px,transparent_1px)] [background-size:24px_24px] opacity-25" />
         <div className={`${containerClass} relative z-10 flex flex-col items-center text-center`}>
           <Link
@@ -96,12 +97,12 @@ const TermsofService = () => {
             </span>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Two-Column Premium Layout */}
       <section className={`${sectionClass} bg-white`}>
         <div className={`${containerClass} grid grid-cols-1 gap-12 lg:grid-cols-[280px_1fr] lg:gap-16`}>
-          
+
           {/* Sticky Navigation Sidebar */}
           <aside className="hidden lg:block">
             <div className="sticky top-28 flex flex-col gap-6">
@@ -115,18 +116,17 @@ const TermsofService = () => {
                     <button
                       key={sec.id}
                       onClick={() => scrollToSection(sec.id)}
-                      className={`text-left text-sm py-2.5 pl-4 -ml-[1px] border-l transition-all duration-300 ${
-                        isActive
-                          ? 'border-neutral-950 text-neutral-950 font-medium scale-[1.02] origin-left'
-                          : 'border-transparent text-neutral-500 hover:text-neutral-900'
-                      }`}
+                      className={`text-left text-sm py-2.5 pl-4 -ml-[1px] border-l transition-all duration-300 ${isActive
+                        ? 'border-neutral-950 text-neutral-950 font-medium scale-[1.02] origin-left'
+                        : 'border-transparent text-neutral-500 hover:text-neutral-900'
+                        }`}
                     >
                       {sec.label}
                     </button>
                   )
                 })}
               </nav>
-              
+
               <div className="mt-8 rounded-2xl bg-cream p-6 border border-neutral-200/50">
                 <h4 className="text-xs font-semibold uppercase tracking-[0.16em] text-neutral-950 mb-2">
                   Need Clarification?
@@ -146,7 +146,7 @@ const TermsofService = () => {
 
           {/* Reading Document Column */}
           <article className="max-w-[780px] prose prose-neutral lg:prose-lg text-neutral-700">
-            
+
             {/* Section: Introduction */}
             <section id="introduction" className="scroll-mt-28 mb-16 pb-12 border-b border-neutral-100">
               <h2 className="text-xl font-medium tracking-[-0.01em] text-neutral-950 sm:text-2xl mb-6 font-serif">

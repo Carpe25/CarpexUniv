@@ -139,7 +139,7 @@ const Catalog = () => {
     <main className="min-h-screen bg-white text-neutral-950">
       <section className="relative h-[440px] min-h-[440px] overflow-hidden bg-neutral-950 sm:h-[540px] lg:h-[560px]">
         <img
-          src="/Catalog Hero.jpg"
+          src="/catalog-new.png"
           alt="Diamond necklace on satin fabric"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -147,7 +147,8 @@ const Catalog = () => {
 
         <div className={`${containerClass} relative z-10 flex h-full items-center pt-17`}>
           <h1 className={`${heroHeadingClass} max-w-[760px] text-white`}>
-            Ready to Retail.
+            Ready  <br />
+            to Retail.
           </h1>
         </div>
       </section>
@@ -157,13 +158,14 @@ const Catalog = () => {
           <div className="max-w-[690px]">
             <p className={`${eyebrowClass} mb-4`}>Catalog</p>
 
-            <p className={subheadingClass}>
-              A curated catalog that brings together designs crafted with both
-              desirability and wearability in mind.
+            <p className={`${subheadingClass} max-w-[720px]`}>
+              A curated catalog that brings
+              together everyday classics with
+              the latest in-demand jewelry styles.
             </p>
           </div>
 
-          <div className="max-w-[590px] pt-1">
+          {/* <div className="max-w-[590px] pt-1">
             <ul className="space-y-7 text-base leading-[1.7] text-neutral-600 sm:text-lg lg:text-[19px]">
               <li className="flex items-start gap-4">
                 <span className="mt-3.5 h-1.5 w-1.5 shrink-0 rounded-full bg-neutral-400" />
@@ -181,7 +183,7 @@ const Catalog = () => {
                 </span>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -196,9 +198,9 @@ const Catalog = () => {
               Showcase the Catalog
             </h2>
 
-            <p className="mt-3 text-base text-neutral-500 sm:text-lg">
+            {/* <p className="mt-3 text-base text-neutral-500 sm:text-lg">
               How can you use the catalog in your retail journey
-            </p>
+            </p> */}
           </div>
 
           <div className="grid w-full grid-cols-1 gap-14 sm:grid-cols-3 sm:gap-8 lg:gap-16">
@@ -288,6 +290,37 @@ const Catalog = () => {
                 the designs firsthand.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Real-time Pricing, Customizable Section */}
+      <section className="w-full">
+        {/* Top Banner Image */}
+        <div className="w-full overflow-hidden">
+          <img
+            src="https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003087221&attachment_id=1105156000004861287"
+            alt="Diamond floral necklace on white satin"
+            className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[480px]"
+          />
+        </div>
+
+        {/* Content Section */}
+        <div className="flex flex-col items-center justify-center bg-sand px-6 py-20 text-center sm:py-24">
+          <h2 className="max-w-[850px] font-sans text-[24px] font-medium leading-[1.35] tracking-[-0.015em] text-neutral-950 sm:text-[34px] lg:text-[38px]">
+            Real-Time Pricing, Seamless Ordering <br className="hidden sm:inline" />
+            & Fully Customizable — No MOQ
+          </h2>
+
+          <div className="mt-8 sm:mt-10">
+            <a
+              href="https://app.univdiam.com/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-neutral-950 px-8 py-3.5 text-[13px] font-medium tracking-[0.05em] text-white transition-all duration-300 hover:bg-neutral-800 hover:scale-[1.03] active:scale-[0.98] shadow-sm hover:shadow-md"
+            >
+              Retailer Login
+            </a>
           </div>
         </div>
       </section>

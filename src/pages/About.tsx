@@ -7,6 +7,24 @@ import {
   bodyClass,
 } from '../styles'
 
+interface TeamMember {
+  name: string
+  title: string
+  image: string
+}
+
+const teamMembers: TeamMember[] = [
+  {
+    name: "Girish Jain",
+    title: "Founder",
+    image: "/girish-jain.jpg"
+  },
+  {
+    name: "Rushabh Doshi",
+    title: "Founder",
+    image: "/rushabh-doshi.jpg"
+  }
+]
 
 
 const About = () => {
@@ -14,7 +32,7 @@ const About = () => {
     <main className="min-h-screen bg-white text-neutral-950">
       <section className="relative h-[440px] min-h-[440px] overflow-hidden bg-neutral-950 sm:h-[540px] lg:h-[560px]">
         <img
-          src="/Custom 3.jpeg"
+          src="/office.png"
           alt="Jeweler crafting a diamond ring by hand"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -22,7 +40,8 @@ const About = () => {
 
         <div className={`${containerClass} relative z-10 flex h-full items-center pt-17`}>
           <h1 className={`${heroHeadingClass} max-w-[640px] text-white`}>
-            About us
+            A New <br />
+            Beginning
           </h1>
         </div>
       </section>
@@ -31,7 +50,7 @@ const About = () => {
         <div className={`${containerClass} grid grid-cols-1 items-start gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20`}>
           <div className="max-w-md">
             <p className={`${eyebrowClass} mb-4`}>Our Story</p>
-            <h2 className={headingClass}>The Story</h2>
+            <h2 className={headingClass}>Who we are</h2>
           </div>
 
           <div className={`max-w-[760px] ${bodyClass}`}>
@@ -56,7 +75,7 @@ const About = () => {
             <h2 className={headingClass}>The people behind Univ Diam</h2>
           </div>
 
-          {/* <div className="grid w-full max-w-[760px] grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12">
+          <div className="grid w-full max-w-[760px] grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12">
             {teamMembers.map((member) => (
               <article key={member.name} className="flex flex-col">
                 <div className="aspect-[4/5] w-full overflow-hidden bg-cream">
@@ -74,13 +93,13 @@ const About = () => {
                 </p>
               </article>
             ))}
-          </div> */}
-          <div className='w-full rounded-md overflow-hidden'>
+          </div>
+          {/* <div className='w-full rounded-md overflow-hidden'>
             <img src="https://images.pexels.com/photos/7414209/pexels-photo-7414209.jpeg" alt="" />
             <div className='py-4'>
               <h3 className="text-md text-neutral-950">Girish Jain & Rushabh Doshi</h3>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </main>

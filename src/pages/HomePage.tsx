@@ -115,7 +115,7 @@ const HomePage = () => {
         <div className={`${containerClass} grid grid-cols-1 items-start gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20`}>
           <div className="about-reveal max-w-md">
             <p className={`${eyebrowClass} mb-4`}>Who we are</p>
-            <h2 className={headingClass}>About Univ Diam</h2>
+            <h2 className={subheadingClass}>About Univ Diam</h2>
           </div>
 
           <div className={`about-reveal max-w-[760px] ${bodyClass}`}>
@@ -176,9 +176,7 @@ const HomePage = () => {
       >
         <div className="clients-header mb-14 flex max-w-3xl flex-col items-center gap-5 text-center lg:mb-16">
           <p className={eyebrowClass}>Partners</p>
-          <h2 className={headingClass}>Brick-and-Mortar,
-            E-Commerce,
-            Private Concierge</h2>
+          <h2 className={headingClass}>Who we work with?</h2>
           {/* <p className="max-w-[860px] text-base leading-[1.7] text-neutral-600 sm:text-lg lg:text-xl">
             Working with modern retailers, independent brands, and growing
             jewelry businesses
@@ -192,7 +190,7 @@ const HomePage = () => {
               <Store className="h-7 w-7 text-neutral-800 transition-transform duration-300 group-hover:scale-105" strokeWidth={1.2} />
             </div>
             <h3 className="mt-6 text-lg font-semibold tracking-[-0.01em] text-neutral-950 sm:text-xl">
-              Independent Jewelry Retailers
+              Brick-and-Mortar
             </h3>
             <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
               From sourcing to display, we help independent retailers with a
@@ -206,7 +204,7 @@ const HomePage = () => {
               <ShoppingCart className="h-7 w-7 text-neutral-800 transition-transform duration-300 group-hover:scale-105" strokeWidth={1.2} />
             </div>
             <h3 className="mt-6 text-lg font-semibold tracking-[-0.01em] text-neutral-950 sm:text-xl">
-              E-Tail Jewelry Partners
+              E-Commerce
             </h3>
             <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
               We power e-tailers with reliable sourcing, order management,
@@ -220,7 +218,7 @@ const HomePage = () => {
               <Sparkles className="h-7 w-7 text-neutral-800 transition-transform duration-300 group-hover:scale-105" strokeWidth={1.2} />
             </div>
             <h3 className="mt-6 text-lg font-semibold tracking-[-0.01em] text-neutral-950 sm:text-xl">
-              Private Jewelry Concierge
+              Private Concierge
             </h3>
             <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
               Bespoke commissions and custom manufacturing for jewelry

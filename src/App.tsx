@@ -15,15 +15,17 @@ const App = () => {
     <div className="min-h-screen overflow-x-hidden bg-white font-sans text-neutral-900 selection:bg-neutral-950 selection:text-white">
       <HashScroll />
       <SiteNavigation />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/custom" element={<Custom />} />
-        <Route path="/catalog" element={<Catalog />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/terms" element={<TermsofService />} />
-        <Route path="/privacy" element={<PrivacyPolicy />} />
-      </Routes>
+      <div className="pt-20">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/custom" element={<Custom />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/terms" element={<TermsofService />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
+        </Routes>
+      </div>
       <SiteFooter />
     </div>
   )

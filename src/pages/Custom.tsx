@@ -11,10 +11,22 @@ import {
 } from '../styles'
 
 const processSteps = [
-  'Submit your custom order request with references or sketches.',
-  'Receive a personalized quote and CAD render within 24-48 hours.',
-  'Approve the design and quotation to begin production.',
-  'Your piece is manufactured, quality checked, and delivered securely in 2-3 weeks.',
+  {
+    title: 'Design Consultation',
+    description: 'Submit your custom order request with references or sketches.',
+  },
+  {
+    title: 'CAD Development',
+    description: 'Receive a personalized quote and CAD render within 24–48 hours.',
+  },
+  {
+    title: 'Production',
+    description: 'Approve the design and quotation to begin production.',
+  },
+  {
+    title: 'Delivery',
+    description: 'Your piece is manufactured, quality checked, and delivered securely.',
+  },
 ]
 
 const Custom = () => {
@@ -23,7 +35,7 @@ const Custom = () => {
       {/* HERO */}
       <section className="relative h-[440px] min-h-[440px] overflow-hidden bg-sand sm:h-[540px] lg:h-[580px]">
         <img
-          src="/Custom-Hero.png"
+          src="/sketch.jpg"
           alt="Jewelry design sketches with pencils and ring drawings"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -44,7 +56,7 @@ const Custom = () => {
       {/* INTRO */}
       <section className={`bg-white ${sectionClass}`}>
         <div className={`${containerClass} max-w-[900px]`}>
-          <p className={`${eyebrowClass} mb-4`}>Custom Orders</p>
+          <p className={`${eyebrowClass} mb-4`}>Custom</p>
 
           <p className={`${subheadingClass} max-w-[720px]`}>
             Submit bespoke jewelry requests through our dedicated portal —
@@ -54,7 +66,7 @@ const Custom = () => {
       </section>
 
       {/* CRAFTSMANSHIP IMAGE */}
-      <section className="bg-white pb-8 sm:pb-12 lg:pb-16">
+      {/* <section className="bg-white pb-8 sm:pb-12 lg:pb-16">
         <div className={`${containerClass}`}>
           <div className="overflow-hidden rounded-md">
             <video
@@ -72,6 +84,14 @@ const Custom = () => {
             </video>
           </div>
         </div>
+      </section> */}
+      <section className="bg-white pb-8 sm:pb-12 lg:pb-16">
+        <div className={`${containerClass}`}>
+          <div className="overflow-hidden rounded-md">
+
+            <img src='/Custom 3.jpeg' />
+          </div>
+        </div>
       </section>
 
       {/* PROCESS */}
@@ -82,7 +102,7 @@ const Custom = () => {
           <div>
             <p className={`${eyebrowClass} mb-4`}>Process</p>
 
-            <h2 className={`${headingClass} max-w-[320px]`}>
+            <h2 className={`${subheadingClass} max-w-[320px]`}>
               How your custom piece comes to life.
             </h2>
           </div>
@@ -90,16 +110,21 @@ const Custom = () => {
           <ol className="flex flex-col">
             {processSteps.map((step, index) => (
               <li
-                key={step}
+                key={step.title}
                 className="flex gap-6 border-t border-neutral-200 py-7 first:border-t-0 first:pt-0 last:pb-0"
               >
                 <span className="text-2xl font-medium leading-none text-neutral-400">
                   {String(index + 1).padStart(2, '0')}
                 </span>
 
-                <span className="max-w-[540px] text-base leading-[1.6] tracking-[-0.01em] text-neutral-900 sm:text-lg">
-                  {step}
-                </span>
+                <div className="flex flex-col gap-1 max-w-[540px]">
+                  <h3 className="text-base font-semibold tracking-[-0.01em] text-neutral-950 sm:text-lg">
+                    {step.title}
+                  </h3>
+                  <p className="mt-1 text-sm leading-[1.65] text-neutral-600 sm:text-base">
+                    {step.description}
+                  </p>
+                </div>
               </li>
             ))}
           </ol>
@@ -111,7 +136,7 @@ const Custom = () => {
         <div className={`${containerClass} flex flex-col items-center`}>
           <div className="relative w-full max-w-[860px] overflow-hidden">
             <img
-              src="/Landing_Page.png"
+              src="/Packaging.jpeg"
               alt="Univ Diam jewelry portal preview"
               className="aspect-[1.42] w-full object-contain"
             />
@@ -124,7 +149,7 @@ const Custom = () => {
             experiences.
           </p>
 
-          <Link to="/#portal-preview" className={`${btnPrimary} mt-8`}>
+          <Link to="https://app.univdiam.com/login" className={`${btnPrimary} mt-8`}>
             Start a Custom Order
 
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

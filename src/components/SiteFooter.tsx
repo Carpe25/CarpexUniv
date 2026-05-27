@@ -82,7 +82,7 @@ const SiteFooter = () => {
 
         {/* Contact */}
         <div className="flex flex-col gap-5">
-          <span className={columnHeadingClass}>United States</span>
+          <span className={columnHeadingClass}>USA</span>
 
           <ul className="flex flex-col gap-3.5 text-sm leading-[1.6] text-neutral-600">
             <li className="flex items-start gap-2.5">
@@ -119,37 +119,16 @@ const SiteFooter = () => {
         </div>
 
         <div className="flex flex-col gap-5">
-          <span className={columnHeadingClass}>Mumbai</span>
+          <span className={columnHeadingClass}>India</span>
 
           <ul className="flex flex-col gap-3.5 text-sm leading-[1.6] text-neutral-600">
             <li className="flex items-start gap-2.5">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-neutral-500" />
 
               <span>
-                802, 93 East building, Mahakali Caves Rd Andheri East, Mumbai, MH 400093
+                802, 93 East Building,<br />
+                Mahakali Caves Rd Andheri East, Mumbai, MH 400093
               </span>
-            </li>
-
-            <li className="flex items-center gap-2.5">
-              <Mail className="h-4 w-4 shrink-0 text-neutral-500" />
-
-              <a
-                href="mailto:hello@univdiam.com"
-                className="transition-colors hover:text-neutral-950"
-              >
-                hello@univdiam.com
-              </a>
-            </li>
-
-            <li className="flex items-center gap-2.5">
-              <Phone className="h-4 w-4 shrink-0 text-neutral-500" />
-
-              <a
-                href="tel:+918451858050"
-                className="transition-colors hover:text-neutral-950"
-              >
-                +91 845 185 8050
-              </a>
             </li>
           </ul>
         </div>

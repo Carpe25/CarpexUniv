@@ -74,15 +74,16 @@ const Contact = () => {
         <main className="min-h-screen bg-white text-neutral-950">
             <section className="relative h-[440px] min-h-[440px] overflow-hidden bg-neutral-950 sm:h-[540px] lg:h-[560px]">
                 <img
-                    src="/Custom Hero.jpg"
+                    src="/contact-img.png"
                     alt="Jewelry design sketches with pencils and ring drawings"
                     className="absolute inset-0 h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-neutral-950/50" />
+                <div className="absolute inset-0 bg-neutral-950/40" />
 
                 <div className={`${containerClass} relative z-10 flex h-full items-center pt-17`}>
                     <h1 className={`${heroHeadingClass} max-w-[640px] text-white`}>
-                        Contact us
+                        Get <br />
+                        in touch
                     </h1>
                 </div>
             </section>
