@@ -36,18 +36,14 @@ const About = () => {
 
           <div className={`max-w-[760px] ${bodyClass}`}>
             <p>
-              Independent jewelry retailers often face inconsistent quality,
-              delayed timelines, and limited flexibility from traditional
-              manufacturers.
+              Independent jewelry retailers often face inconsistent quality, delayed timelines, high minimum order requirements, and limited flexibility from traditional manufacturers.
             </p>
             <p className="mt-7">
-              Univ Diam was built to change that — acting as an extended design
-              and manufacturing partner for modern retailers through our
-              Design–Manufacture–Deliver model.
+              Univ Diam was built to change that — acting as an extended design and manufacturing partner for modern retailers through our Design–Manufacture–Deliver model.
+
             </p>
             <p className="mt-7">
-              We bring together custom design, curated production, and reliable
-              delivery with the flexibility and support growing brands need.
+              We bring together custom design, curated production, and reliable delivery — all with no minimum order quantities and the flexibility and support growing brands need.
             </p>
           </div>
         </div>

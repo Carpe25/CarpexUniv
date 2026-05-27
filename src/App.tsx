@@ -7,6 +7,8 @@ import SiteFooter from './components/SiteFooter'
 import SiteNavigation from './components/SiteNavigation'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import TermsofService from './pages/TermsofService'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/terms" element={<TermsofService />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
       <SiteFooter />
     </div>

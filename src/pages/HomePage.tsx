@@ -176,11 +176,13 @@ const HomePage = () => {
       >
         <div className="clients-header mb-14 flex max-w-3xl flex-col items-center gap-5 text-center lg:mb-16">
           <p className={eyebrowClass}>Partners</p>
-          <h2 className={headingClass}>Who we work with?</h2>
-          <p className="max-w-[860px] text-base leading-[1.7] text-neutral-600 sm:text-lg lg:text-xl">
+          <h2 className={headingClass}>Brick-and-Mortar,
+            E-Commerce,
+            Private Concierge</h2>
+          {/* <p className="max-w-[860px] text-base leading-[1.7] text-neutral-600 sm:text-lg lg:text-xl">
             Working with modern retailers, independent brands, and growing
             jewelry businesses
-          </p>
+          </p> */}
         </div>
 
         <div className="client-card-container grid w-full grid-cols-1 gap-14 sm:grid-cols-3 sm:gap-8 lg:gap-16">

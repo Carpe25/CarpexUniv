@@ -5,8 +5,8 @@ import { Menu, X } from 'lucide-react'
 const navItems = [
   { label: 'Custom', to: '/custom' },
   { label: 'Catalog', to: '/catalog' },
-  { label: 'Who are we?', to: '/about' },
-  { label: 'Contact us', to: '/contact' },
+  { label: 'About', to: '/about' },
+  { label: 'Contact', to: '/contact' },
 ]
 
 const SiteNavigation = () => {
@@ -52,7 +52,11 @@ const SiteNavigation = () => {
           className={`group inline-flex items-center gap-2.5 transition-opacity hover:opacity-75 ${linkTone}`}
           onClick={() => setMobileMenuOpen(false)}
         >
-          <img src="/Favicon32.svg" alt="" className="h-10 w-auto" />
+          <img
+            src="/Favicon32.svg"
+            alt=""
+            className={`h-10 w-auto transition-all duration-300 ${isTransparent ? 'brightness-0 invert' : ''}`}
+          />
         </Link>
 
         <nav className="hidden items-center gap-10 text-[16px] tracking-[-0.01em] md:flex lg:gap-[72px]">

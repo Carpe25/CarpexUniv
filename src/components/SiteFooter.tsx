@@ -28,9 +28,18 @@ const SiteFooter = () => {
 
         {/* Navigation */}
         <div className="flex flex-col gap-5">
-          <span className={columnHeadingClass}>Navigation</span>
+          <span className={columnHeadingClass}>Explore</span>
 
           <ul className="flex flex-col gap-3.5 text-sm text-neutral-600">
+            <li>
+              <Link
+                to="/custom"
+                className="transition-colors duration-300 hover:text-neutral-950"
+              >
+                Custom
+              </Link>
+            </li>
+
             <li>
               <Link
                 to="/catalog"
@@ -42,19 +51,19 @@ const SiteFooter = () => {
 
             <li>
               <Link
-                to="/custom"
+                to="/about"
                 className="transition-colors duration-300 hover:text-neutral-950"
               >
-                Bespoke Custom
+                Our Story
               </Link>
             </li>
 
             <li>
               <Link
-                to="/about"
+                to="/contact"
                 className="transition-colors duration-300 hover:text-neutral-950"
               >
-                Our Philosophy
+                Contact
               </Link>
             </li>
 
@@ -65,17 +74,15 @@ const SiteFooter = () => {
                 rel="noopener noreferrer"
                 className="transition-colors duration-300 hover:text-neutral-950"
               >
-                Univ Diam Portal
+                Retailer Login
               </a>
             </li>
-
-
           </ul>
         </div>
 
         {/* Contact */}
         <div className="flex flex-col gap-5">
-          <span className={columnHeadingClass}>Headquarters</span>
+          <span className={columnHeadingClass}>United States</span>
 
           <ul className="flex flex-col gap-3.5 text-sm leading-[1.6] text-neutral-600">
             <li className="flex items-start gap-2.5">
@@ -111,14 +118,40 @@ const SiteFooter = () => {
           </ul>
         </div>
 
-        {/* Optional Extra Column */}
         <div className="flex flex-col gap-5">
-          <span className={columnHeadingClass}>Availability</span>
+          <span className={columnHeadingClass}>Mumbai</span>
 
-          <p className="text-sm leading-[1.75] text-neutral-600">
-            Supporting global jewelry partners with responsive production,
-            secure logistics, and dedicated client communication.
-          </p>
+          <ul className="flex flex-col gap-3.5 text-sm leading-[1.6] text-neutral-600">
+            <li className="flex items-start gap-2.5">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-neutral-500" />
+
+              <span>
+                802, 93 East building, Mahakali Caves Rd Andheri East, Mumbai, MH 400093
+              </span>
+            </li>
+
+            <li className="flex items-center gap-2.5">
+              <Mail className="h-4 w-4 shrink-0 text-neutral-500" />
+
+              <a
+                href="mailto:hello@univdiam.com"
+                className="transition-colors hover:text-neutral-950"
+              >
+                hello@univdiam.com
+              </a>
+            </li>
+
+            <li className="flex items-center gap-2.5">
+              <Phone className="h-4 w-4 shrink-0 text-neutral-500" />
+
+              <a
+                href="tel:+918451858050"
+                className="transition-colors hover:text-neutral-950"
+              >
+                +91 845 185 8050
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -143,13 +176,6 @@ const SiteFooter = () => {
             className="transition-colors hover:text-neutral-900"
           >
             Terms of Service
-          </Link>
-
-          <Link
-            to="/sitemap"
-            className="transition-colors hover:text-neutral-900"
-          >
-            Sitemap
           </Link>
         </div>
       </div>
