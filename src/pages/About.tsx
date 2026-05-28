@@ -7,24 +7,24 @@ import {
   bodyClass,
 } from '../styles'
 
-interface TeamMember {
-  name: string
-  title: string
-  image: string
-}
+// interface TeamMember {
+//   name: string
+//   title: string
+//   image: string
+// }
 
-const teamMembers: TeamMember[] = [
-  {
-    name: "Girish Jain",
-    title: "Founder",
-    image: "/girish-jain.jpg"
-  },
-  {
-    name: "Rushabh Doshi",
-    title: "Founder",
-    image: "/rushabh-doshi.jpg"
-  }
-]
+// const teamMembers: TeamMember[] = [
+//   {
+//     name: "Girish Jain",
+//     title: "Founder",
+//     image: "/girish-jain.jpg"
+//   },
+//   {
+//     name: "Rushabh Doshi",
+//     title: "Founder",
+//     image: "/rushabh-doshi.jpg"
+//   }
+// ]
 
 
 const About = () => {

@@ -120,19 +120,14 @@ const HomePage = () => {
 
           <div className={`about-reveal max-w-[760px] ${bodyClass}`}>
             <p>
-              Independent jewelry retailers often face inconsistent quality,
-              delayed timelines, and limited flexibility from traditional
-              manufacturers.
-            </p>
+              Univ Diam is the evolution of a multi-generational jewelry manufacturer celebrating nearly 50 years servicing jewelry retailers across the United States.  Embracing our heritage, our shared passion for design, logistics and service has brought forth a unified vision to help modern retailers reach the evolving customer.            </p>
             <p className="mt-7">
-              Univ Diam was built to change that-acting as an extended design
-              and manufacturing partner for modern retailers through our
-              Design-Manufacture-Deliver model.
+              With our <span className='text-orange-500' >Design-Manufacture-Deliver</span> model, we bring together creative capability, disciplined operational infrastructure, and strategic collaboration to partner with retailers as a true extension of their team.  We are a tech-forward, human-led company that values life-long relationships...not an aggregator platform.
             </p>
-            <p className="mt-7">
+            {/* <p className="mt-7">
               We bring together custom design, curated production, and reliable
               delivery with the flexibility and support growing brands need.
-            </p>
+            </p> */}
           </div>
         </div>
       </section>
@@ -195,8 +190,7 @@ const HomePage = () => {
               Brick-and-Mortar
             </h3>
             <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
-              From sourcing to display, we help independent retailers with a
-              curated stock, custom orders, and manufacturing support.
+              Live inventory, sample line, and digital catalog with real-time pricing to effectively showcase products – reduce friction and close sales.
             </p>
           </div>
 
@@ -209,8 +203,7 @@ const HomePage = () => {
               E-Commerce
             </h3>
             <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
-              We power e-tailers with reliable sourcing, order management,
-              delivery support with the flexibility to scale.
+              Customizable digital catalog with high quality renders, supported by fast delivery and drop-shipping capabilities.
             </p>
           </div>
 
@@ -223,8 +216,7 @@ const HomePage = () => {
               Private Concierge
             </h3>
             <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
-              Bespoke commissions and custom manufacturing for jewelry
-              consultants, influencers and industry professionals.
+              Marketing and operational support, curated designer catalog and bespoke creation – assisting jewelry consultants and influencers in creating/growing their brand.
             </p>
           </div>
         </div>
