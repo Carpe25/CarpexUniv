@@ -74,7 +74,7 @@ const Contact = () => {
         <main className="min-h-screen bg-white text-neutral-950">
             <section className="relative h-[440px] min-h-[440px] overflow-hidden bg-neutral-950 sm:h-[540px] lg:h-[560px]">
                 <img
-                    src="/contact-img.png"
+                    src="/Contact-hero.png"
                     alt="Jewelry design sketches with pencils and ring drawings"
                     className="absolute inset-0 h-full w-full object-cover"
                 />

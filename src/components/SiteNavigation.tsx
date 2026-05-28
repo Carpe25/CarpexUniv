@@ -51,6 +51,8 @@ const SiteNavigation = () => {
         <div className="flex items-center gap-3">
           <Link
             to="https://app.univdiam.com/signup"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden rounded-full bg-neutral-950 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-neutral-800 sm:inline-flex"
           >
             Retailer Login

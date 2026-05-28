@@ -94,7 +94,7 @@ const HomePage = () => {
         {/* Desktop Landscape Video */}
         <video
           className="hidden sm:block h-full w-full object-cover"
-          src="/hero.mp4"
+          src="/Final1.mp4"
           loop
           muted
           autoPlay
@@ -103,7 +103,7 @@ const HomePage = () => {
         {/* Mobile Portrait Video */}
         <video
           className="block sm:hidden w-full h-auto"
-          src="/ud potrait.mp4"
+          src="/ud-potrait.mp4"
           loop
           muted
           autoPlay
@@ -154,6 +154,8 @@ const HomePage = () => {
 
             <Link
               to="https://app.univdiam.com/signup"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden rounded-full bg-neutral-950 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-neutral-800 sm:inline-flex"
             >
               Join for Free

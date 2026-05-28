@@ -8,32 +8,77 @@ import {
   eyebrowClass,
 } from '../styles'
 
-const catalogPieces = [
-  {
-    src: './product2.jpeg',
-    alt: 'Diamond',
-  },
-  {
-    src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003557320&attachment_id=1105156000003557324',
-    alt: 'Diamond floral necklace on warm satin',
-  },
-  {
-    src: './product1.jpeg',
-    alt: 'Diamond eternity ring on satin',
-  },
-  {
-    src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003087221&attachment_id=1105156000004861287',
-    alt: 'Diamond floral necklace on white satin',
-  },
-  {
-    src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003108005&attachment_id=1105156000003260346',
-    alt: 'Diamond',
-  },
-  {
-    src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003108517&attachment_id=1105156000004861217',
-    alt: 'Diamond eternity ring on satin',
-  },
-]
+const catalogPieces =
+  [
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003141150&attachment_id=1105156000005094121',
+      alt: 'Diamond bracelet',
+    },
+    {
+      src: './product2.jpeg',
+      alt: 'Diamond',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003557320&attachment_id=1105156000003557324',
+      alt: 'Diamond floral necklace on warm satin',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000004248091&attachment_id=1105156000004364179',
+      alt: 'Diamond jewelry close-up',
+    },
+    {
+      src: './product1.jpeg',
+      alt: 'Diamond eternity ring on satin',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003055187&attachment_id=1105156000003548586',
+      alt: 'Luxury diamond jewelry',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003108149&attachment_id=1105156000003108154',
+      alt: 'Diamond necklace',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003087221&attachment_id=1105156000004861287',
+      alt: 'Diamond floral necklace on white satin',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003549184&attachment_id=1105156000005094059',
+      alt: 'Diamond pendant',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003108005&attachment_id=1105156000003260346',
+      alt: 'Diamond',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003557284&attachment_id=1105156000004182003',
+      alt: 'Diamond earrings',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003137035&attachment_id=1105156000005094004',
+      alt: 'Diamond ring detail',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003108517&attachment_id=1105156000004861217',
+      alt: 'Diamond eternity ring on satin',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003141250&attachment_id=1105156000004861037',
+      alt: 'Elegant diamond jewelry',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000004248534&attachment_id=1105156000004364036',
+      alt: 'Diamond eternity ring on satin',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003557284&attachment_id=1105156000004182003',
+      alt: 'Diamond earrings',
+    },
+    {
+      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000004248534&attachment_id=1105156000004364036',
+      alt: 'Diamond eternity ring on satin',
+    },
+  ]
 
 const CatalogMarquee = () => {
   const trackRef = useRef<HTMLDivElement>(null)
@@ -112,19 +157,19 @@ const CatalogMarquee = () => {
     <section className="relative overflow-hidden">
       <div
         ref={trackRef}
-        className="flex min-h-[420px] cursor-grab touch-pan-y select-none gap-px lg:min-h-[520px]"
+        className="flex min-h-[520px] cursor-grab touch-pan-y select-none gap-px lg:min-h-[640px]"
       >
         {[...catalogPieces, ...catalogPieces].map((piece, index) => (
           <article
             key={`${piece.src}-${index}`}
-            className="flex min-h-[360px] w-[80vw] shrink-0 items-center justify-center sm:min-h-[520px] sm:w-[33.333vw]"
+            className="flex h-[520px] w-[80vw] shrink-0 items-center justify-center sm:h-[640px] lg:h-[700px] sm:w-[33.333vw]"
           >
             <div className="h-full w-full p-4 sm:p-6">
               <img
                 src={piece.src}
                 alt={piece.alt}
                 draggable={false}
-                className="h-full w-full object-contain"
+                className="h-full w-full object-cover"
               />
             </div>
           </article>
@@ -137,15 +182,15 @@ const CatalogMarquee = () => {
 const Catalog = () => {
   return (
     <main className="min-h-screen bg-white text-neutral-950">
-      <section className="relative h-[440px] min-h-[440px] overflow-hidden bg-neutral-950 sm:h-[540px] lg:h-[560px]">
+      <section className="relative h-[700px] min-h-[440px] overflow-hidden bg-neutral-950 sm:h-[540px] lg:h-[560px]">
         <img
-          src="/catalog-new.png"
+          src="/catalog-new-2.png"
           alt="Diamond necklace on satin fabric"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-neutral-950/40" />
 
-        <div className={`${containerClass} relative z-10 flex h-full items-center pt-17`}>
+        <div className={`${containerClass} relative z-10 flex h-full items-center pt-1`}>
           <h1 className={`${heroHeadingClass} max-w-[760px] text-white`}>
             Ready  <br />
             to Retail.
@@ -299,7 +344,7 @@ const Catalog = () => {
         {/* Top Banner Image */}
         <div className="w-full overflow-hidden">
           <img
-            src="https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003087221&attachment_id=1105156000004861287"
+            src="/new catalog.jpeg"
             alt="Diamond floral necklace on white satin"
             className="h-[320px] w-full object-cover sm:h-[420px] lg:h-[480px]"
           />
