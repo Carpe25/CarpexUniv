@@ -75,7 +75,7 @@ const About = () => {
             <h2 className={headingClass}>The people behind Univ Diam</h2>
           </div>
 
-          <div className="grid w-full max-w-[760px] grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12">
+          {/* <div className="grid w-full max-w-[760px] grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12">
             {teamMembers.map((member) => (
               <article key={member.name} className="flex flex-col">
                 <div className="aspect-[4/5] w-full overflow-hidden bg-cream">
@@ -93,13 +93,13 @@ const About = () => {
                 </p>
               </article>
             ))}
-          </div>
-          {/* <div className='w-full rounded-md overflow-hidden'>
-            <img src="https://images.pexels.com/photos/7414209/pexels-photo-7414209.jpeg" alt="" />
+          </div> */}
+          <div className='w-full rounded-md overflow-hidden'>
+            <img src="/rushabh x girish.jpeg" alt="" />
             <div className='py-4'>
               <h3 className="text-md text-neutral-950">Girish Jain & Rushabh Doshi</h3>
             </div>
-          </div> */}
+          </div>
         </div>
       </section>
     </main>
