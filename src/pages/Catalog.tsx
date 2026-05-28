@@ -364,7 +364,7 @@ const Catalog = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-neutral-950 px-8 py-3.5 text-[13px] font-medium tracking-[0.05em] text-white transition-all duration-300 hover:bg-neutral-800 hover:scale-[1.03] active:scale-[0.98] shadow-sm hover:shadow-md"
             >
-              Retailer Login
+              View Catalog
             </a>
           </div>
         </div>

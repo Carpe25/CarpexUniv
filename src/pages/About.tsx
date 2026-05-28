@@ -38,7 +38,7 @@ const About = () => {
         />
         <div className="absolute inset-0 bg-neutral-950/50" />
 
-        <div className={`${containerClass} relative z-10 flex h-full items-center pt-17`}>
+        <div className={`${containerClass} relative z-10 flex h-full items-center`}>
           <h1 className={`${heroHeadingClass} max-w-[640px] text-white`}>
             A New <br />
             Beginning
