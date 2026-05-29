@@ -2,7 +2,7 @@ import {
   containerClass,
   sectionClass,
   heroHeadingClass,
-  headingClass,
+  subheadingClass,
   eyebrowClass,
   bodyClass,
 } from '../styles'
@@ -41,7 +41,7 @@ const About = () => {
         <div className={`${containerClass} relative z-10 flex h-full items-center`}>
           <h1 className={`${heroHeadingClass} max-w-[640px] text-white`}>
             A New <br />
-            Beginning
+            Beginning.
           </h1>
         </div>
       </section>
@@ -50,7 +50,7 @@ const About = () => {
         <div className={`${containerClass} grid grid-cols-1 items-start gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20`}>
           <div className="max-w-md">
             <p className={`${eyebrowClass} mb-4`}>Our Story</p>
-            <h2 className={headingClass}>Who we are</h2>
+            <h2 className={subheadingClass}>The Foundation of Univ Diam</h2>
           </div>
 
           <div className={`max-w-[760px] ${bodyClass}`}>
@@ -72,7 +72,7 @@ const About = () => {
         <div className={`${containerClass} flex flex-col items-center`}>
           <div className="mb-14 flex flex-col items-center gap-4 text-center lg:mb-16">
             <p className={eyebrowClass}>The Team</p>
-            <h2 className={headingClass}>The people behind Univ Diam</h2>
+            <h2 className={subheadingClass}>The people behind Univ Diam</h2>
           </div>
 
           {/* <div className="grid w-full max-w-[760px] grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12">

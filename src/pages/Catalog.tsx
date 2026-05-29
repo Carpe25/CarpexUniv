@@ -51,10 +51,6 @@ const catalogPieces =
       alt: 'Diamond',
     },
     {
-      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003557284&attachment_id=1105156000004182003',
-      alt: 'Diamond earrings',
-    },
-    {
       src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003137035&attachment_id=1105156000005094004',
       alt: 'Diamond ring detail',
     },
@@ -73,10 +69,6 @@ const catalogPieces =
     {
       src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000003557284&attachment_id=1105156000004182003',
       alt: 'Diamond earrings',
-    },
-    {
-      src: 'https://catalog.carpediam.in/api/image-proxy?module=Product_Variants&id=1105156000004248534&attachment_id=1105156000004364036',
-      alt: 'Diamond eternity ring on satin',
     },
   ]
 
@@ -275,8 +267,7 @@ const Catalog = () => {
               </h3>
 
               <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
-                Integrate ready inventory into your website or e-commerce
-                platform seamlessly.
+                ⁠In-stock designs ready to showcase in your store or ship for next day delivery.
               </p>
             </div>
 
@@ -301,8 +292,7 @@ const Catalog = () => {
               </h3>
 
               <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
-                Access curated digital catalog for easy sharing, discovery, and
-                selling.
+                Share products with live retail pricing in configurable metal and diamond quality options.
               </p>
             </div>
 
@@ -331,8 +321,7 @@ const Catalog = () => {
               </h3>
 
               <p className="mt-3 max-w-[280px] text-sm leading-[1.65] text-neutral-500 sm:text-base">
-                Keep a selected sample line in-store for customers to experience
-                the designs firsthand.
+                Display curated designs of classics and designer jewelry without high overhead costs.
               </p>
             </div>
           </div>
@@ -359,12 +348,12 @@ const Catalog = () => {
 
           <div className="mt-8 sm:mt-10">
             <a
-              href="https://app.univdiam.com/signup"
+              href="https://app.univdiam.com/login"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-neutral-950 px-8 py-3.5 text-[13px] font-medium tracking-[0.05em] text-white transition-all duration-300 hover:bg-neutral-800 hover:scale-[1.03] active:scale-[0.98] shadow-sm hover:shadow-md"
             >
-              View Catalog
+              VIEW THE CATALOG
             </a>
           </div>
         </div>

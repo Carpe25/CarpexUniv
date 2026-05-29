@@ -122,7 +122,7 @@ const HomePage = () => {
             <p>
               Univ Diam is the evolution of a multi-generational jewelry manufacturer celebrating nearly 50 years servicing jewelry retailers across the United States.  Embracing our heritage, our shared passion for design, logistics and service has brought forth a unified vision to help modern retailers reach the evolving customer.            </p>
             <p className="mt-7">
-              With our <span className='text-orange-500' >Design-Manufacture-Deliver</span> model, we bring together creative capability, disciplined operational infrastructure, and strategic collaboration to partner with retailers as a true extension of their team.  We are a tech-forward, human-led company that values life-long relationships...not an aggregator platform.
+              With our <span className='text-orange-500' >Design-Manufacture-Deliver</span> model, we bring together creative capability, disciplined operational infrastructure, and strategic collaboration to partner with retailers as a true extension of their team.  We are a tech-forward, human-led company that values life-long relationships.
             </p>
             {/* <p className="mt-7">
               We bring together custom design, curated production, and reliable

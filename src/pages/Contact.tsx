@@ -4,9 +4,9 @@ import {
     containerClass,
     sectionClass,
     heroHeadingClass,
-    headingClass,
     eyebrowClass,
-    bodyClass,
+    // bodyClass,
+    subheadingClass,
 } from '../styles'
 
 const contactDetails = [
@@ -83,7 +83,7 @@ const Contact = () => {
                 <div className={`${containerClass} relative z-10 flex h-full items-center`}>
                     <h1 className={`${heroHeadingClass} max-w-[640px] text-white`}>
                         Get <br />
-                        in touch
+                        in touch.
                     </h1>
                 </div>
             </section>
@@ -91,19 +91,19 @@ const Contact = () => {
             <section className={`bg-white ${sectionClass}`}>
                 <div className={`${containerClass} grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20`}>
                     <div className="max-w-md">
-                        <p className={`${eyebrowClass} mb-4`}>Get in touch</p>
-                        <h2 className={headingClass}>Let's build something together.</h2>
-                        <p className={`mt-6 ${bodyClass}`}>
+                        <p className={`${eyebrowClass} mb-4`}>Contact</p>
+                        <h2 className={subheadingClass}>Let's build something together.</h2>
+                        {/* <p className={`mt-6 ${bodyClass}`}>
                             Whether you're scaling a retail brand or commissioning a bespoke
                             piece, our partnerships team will get back to you within one
                             business day.
-                        </p>
+                        </p> */}
 
                         <ul className="mt-10 flex flex-col gap-7">
                             {contactDetails.map(({ Icon, label, value, href }) => (
                                 <li key={label} className="flex items-start gap-4">
-                                    <div className="flex h-10 w-10 shrink-0 items-center justify-center bg-neutral-950 text-white">
-                                        <Icon className="h-4 w-4 stroke-[1.75]" />
+                                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-neutral-50 transition-colors duration-300 hover:bg-neutral-100/80">
+                                        <Icon className="h-5 w-5 text-neutral-800 stroke-[1.5] transition-transform duration-300 hover:scale-105" />
                                     </div>
                                     <div>
                                         <p className={labelClass}>{label}</p>
@@ -169,7 +169,7 @@ const Contact = () => {
                                         name="message"
                                         required
                                         rows={4}
-                                        placeholder="Tell us about your project or enquiry…"
+                                        placeholder="Tell us about your project or Inquiry.."
                                         className={`${fieldClass} resize-none`}
                                     />
                                 </div>

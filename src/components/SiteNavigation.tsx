@@ -50,7 +50,7 @@ const SiteNavigation = () => {
         {/* Right Side */}
         <div className="flex items-center gap-3">
           <Link
-            to="https://app.univdiam.com/signup"
+            to="https://app.univdiam.com/login"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden rounded-full bg-neutral-950 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-neutral-800 sm:inline-flex"
@@ -87,11 +87,11 @@ const SiteNavigation = () => {
           </nav>
 
           <Link
-            to="https://app.univdiam.com/signup"
+            to="https://app.univdiam.com/login"
             onClick={() => setMobileMenuOpen(false)}
             className="mt-5 flex w-full justify-center rounded-full bg-neutral-950 px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-neutral-800"
           >
-            Get Started Free
+            Retailer Login
           </Link>
         </div>
       )}
