@@ -1,11 +1,13 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+import { ArrowRight } from 'lucide-react'
 import {
   containerClass,
   sectionClass,
   heroHeadingClass,
   subheadingClass,
   eyebrowClass,
+  btnPrimary,
 } from '../styles'
 
 const catalogPieces =
@@ -351,9 +353,11 @@ const Catalog = () => {
               href="https://app.univdiam.com/login"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-neutral-950 px-8 py-3.5 text-[13px] font-medium tracking-[0.05em] text-white transition-all duration-300 hover:bg-neutral-800 hover:scale-[1.03] active:scale-[0.98] shadow-sm hover:shadow-md"
+              className={btnPrimary}
             >
               VIEW THE CATALOG
+
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </a>
           </div>
         </div>

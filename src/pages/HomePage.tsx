@@ -3,7 +3,7 @@ import {
   Store,
   ShoppingCart,
   Sparkles,
-
+  ArrowRight,
 } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -14,6 +14,7 @@ import {
   subheadingClass,
   eyebrowClass,
   bodyClass,
+  btnPrimary,
 } from '../styles'
 import { Link } from 'react-router-dom'
 
@@ -151,9 +152,11 @@ const HomePage = () => {
               to="https://app.univdiam.com/signup"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden rounded-full bg-neutral-950 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-neutral-800 sm:inline-flex"
+              className={`${btnPrimary} hidden sm:inline-flex`}
             >
               Join for Free
+
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
           </div>
 

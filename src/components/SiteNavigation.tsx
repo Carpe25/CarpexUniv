@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ArrowRight } from 'lucide-react'
 
 const navItems = [
   { label: 'Custom', to: '/custom' },
@@ -53,9 +53,11 @@ const SiteNavigation = () => {
             to="https://app.univdiam.com/login"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden rounded-full bg-neutral-950 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-neutral-800 sm:inline-flex"
+            className="group hidden items-center gap-2 rounded-full bg-neutral-950 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-neutral-800 sm:inline-flex"
           >
             Retailer Login
+
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
 
           {/* Mobile Toggle */}
@@ -89,9 +91,11 @@ const SiteNavigation = () => {
           <Link
             to="https://app.univdiam.com/login"
             onClick={() => setMobileMenuOpen(false)}
-            className="mt-5 flex w-full justify-center rounded-full bg-neutral-950 px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-neutral-800"
+            className="group mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-neutral-950 px-5 py-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-colors hover:bg-neutral-800"
           >
             Retailer Login
+
+            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
       )}

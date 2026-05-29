@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin, Phone, ArrowRight } from 'lucide-react'
 import {
     containerClass,
     sectionClass,
@@ -7,6 +7,7 @@ import {
     eyebrowClass,
     // bodyClass,
     subheadingClass,
+    btnPrimary,
 } from '../styles'
 
 const contactDetails = [
@@ -183,9 +184,13 @@ const Contact = () => {
                                 <button
                                     type="submit"
                                     disabled={submitting}
-                                    className="mt-1 w-full rounded-full bg-neutral-950 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white transition-colors duration-300 hover:bg-neutral-800 disabled:cursor-not-allowed disabled:opacity-60"
+                                    className={`${btnPrimary} mt-1 w-full disabled:cursor-not-allowed disabled:opacity-60`}
                                 >
                                     {submitting ? 'Sending…' : 'Send Message'}
+
+                                    {!submitting && (
+                                        <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                                    )}
                                 </button>
                             </form>
                         )}
