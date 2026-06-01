@@ -55,7 +55,7 @@ const About = () => {
 
           <div className={`max-w-[760px] ${bodyClass}`}>
             <p>
-              Univ Diam was born from an organic connection between Rushabh and Girish, who met in 2019, and instantly aligned on passion, purpose, and a vision for the evolving jewelry industry.  At the time, Rushabh came from 10+ years of experience handling complex logistics and jewelry distribution for majors, wholesalers, and marketplaces.  Girish came from 10+ years of experience servicing independent jewelry stores across the United States, in a multi-generational family business founded in1978.
+              Univ Diam was born from an organic connection between Rushabh and Girish, who met in 2019, and instantly aligned on passion, purpose, and a vision for the evolving jewelry industry.  At the time, Rushabh came from 10+ years of experience handling complex logistics and jewelry distribution for majors, wholesalers, and marketplaces.  Girish came from 10+ years of experience servicing independent jewelry stores across the United States, in a multi-generational family business founded in 1978.
             </p>
             <p className="mt-7">
               While embracing our heritage and those that came before us, we are mindful of the rapidly changing world we live in.  Today, Rushabh manages manufacturing and operations of the India office in Mumbai.  Girish manages sales and distribution of the USA office in Pittsburgh.
@@ -66,10 +66,10 @@ const About = () => {
 
       <section className={`bg-mist ${sectionClass}`}>
         <div className={`${containerClass} flex flex-col items-center`}>
-          {/* <div className="mb-14 flex flex-col items-center gap-4 text-center lg:mb-16">
+          <div className="mb-14 flex flex-col items-center gap-4 text-center lg:mb-16">
             <p className={eyebrowClass}>OUR VISION</p>
-            <h2 className={subheadingClass}>To set the standard for operational excellence in fine jewelry production — becoming the most trusted end-to-end partner for independent jewelry retailers.</h2>
-          </div> */}
+            {/* <h2 className={subheadingClass}>To set the standard for operational excellence in fine jewelry production — becoming the most trusted end-to-end partner for independent jewelry retailers.</h2> */}
+          </div>
 
           {/* <div className="grid w-full max-w-[760px] grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12">
             {teamMembers.map((member) => (
