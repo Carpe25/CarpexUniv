@@ -7,24 +7,24 @@ import {
   bodyClass,
 } from '../styles'
 
-// interface TeamMember {
-//   name: string
-//   title: string
-//   image: string
-// }
+interface TeamMember {
+  name: string
+  title: string
+  image: string
+}
 
-// const teamMembers: TeamMember[] = [
-//   {
-//     name: "Girish Jain",
-//     title: "Founder",
-//     image: "/girish-jain.jpg"
-//   },
-//   {
-//     name: "Rushabh Doshi",
-//     title: "Founder",
-//     image: "/rushabh-doshi.jpg"
-//   }
-// ]
+const teamMembers: TeamMember[] = [
+  {
+    name: "Girish Jain",
+    title: "Founder",
+    image: "/girish-jain.png"
+  },
+  {
+    name: "Rushabh Doshi",
+    title: "Founder",
+    image: "/rushabh-doshi.png"
+  }
+]
 
 
 const About = () => {
@@ -71,7 +71,7 @@ const About = () => {
             {/* <h2 className={subheadingClass}>To set the standard for operational excellence in fine jewelry production — becoming the most trusted end-to-end partner for independent jewelry retailers.</h2> */}
           </div>
 
-          {/* <div className="grid w-full max-w-[760px] grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12">
+          <div className="grid w-full max-w-[760px] grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-12">
             {teamMembers.map((member) => (
               <article key={member.name} className="flex flex-col">
                 <div className="aspect-[4/5] w-full overflow-hidden bg-cream">
@@ -89,13 +89,13 @@ const About = () => {
                 </p>
               </article>
             ))}
-          </div> */}
-          <div className='w-full rounded-md overflow-hidden'>
+          </div>
+          {/* <div className='w-full rounded-md overflow-hidden'>
             <img src="/rushabh x girish.jpeg" alt="" />
             <div className='mt-10 max-w-[1000px] text-center mx-auto lg:mt-12'>
               <h2 className={subheadingClass}>To set the standard for operational excellence in fine jewelry production — becoming the most trusted end-to-end partner for independent jewelry retailers.</h2>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
     </main>
