@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
+import { trackEvent } from '../lib/analytics'
 import {
   containerClass,
   sectionClass,
@@ -147,7 +148,8 @@ const Custom = () => {
           </p>
 
           <Link to="https://app.univdiam.com/login" className={`${btnPrimary} mt-8`} target="_blank"
-            rel="noopener noreferrer">
+            rel="noopener noreferrer"
+            onClick={() => trackEvent('start_custom_order', { destination: 'order_portal' })}>
             Start a Custom Order
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>

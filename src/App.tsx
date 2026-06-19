@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import Custom from './pages/Custom'
@@ -9,8 +10,17 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import TermsofService from './pages/TermsofService'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import ConsentBanner from './components/ConsentBanner'
+import { usePageTracking } from './components/usePageTracking'
+import { initAnalytics } from './lib/analytics'
 
 const App = () => {
+  useEffect(() => {
+    initAnalytics()
+  }, [])
+
+  usePageTracking()
+
   return (
     <div className="min-h-screen overflow-x-hidden bg-white font-sans text-neutral-900 selection:bg-neutral-950 selection:text-white">
       <HashScroll />
@@ -27,6 +37,7 @@ const App = () => {
         </Routes>
       </div>
       <SiteFooter />
+      <ConsentBanner />
     </div>
   )
 }

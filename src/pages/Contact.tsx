@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Mail, MapPin, Phone, ArrowRight } from 'lucide-react'
+import { trackEvent } from '../lib/analytics'
 import {
     containerClass,
     sectionClass,
@@ -62,6 +63,11 @@ const Contact = () => {
                     email: formData.get('email'),
                     message: formData.get('message'),
                 }),
+            })
+            // Conversion: a partnership/contact lead was submitted.
+            trackEvent('generate_lead', {
+                form: 'contact',
+                has_company: Boolean(formData.get('company')),
             })
             setSubmitted(true)
         } catch {
