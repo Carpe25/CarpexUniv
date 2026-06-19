@@ -63,8 +63,8 @@ export function initAnalytics(): void {
     window.gtag('config', GA_ID, { send_page_view: false })
 }
 
-/** Upgrade consent once the visitor accepts the banner. */
-export function grantConsent(): void {
+/** Accept all: full analytics + advertising/remarketing signals. */
+export function grantAll(): void {
     if (!GA_ID) return
     window.gtag('consent', 'update', {
         ad_storage: 'granted',
@@ -74,14 +74,18 @@ export function grantConsent(): void {
     })
 }
 
-/** Record that the visitor explicitly declined (keeps cookieless mode). */
-export function denyConsent(): void {
+/**
+ * Reject non-essential: keep basic analytics (pages, engagement time,
+ * approximate location, traffic source) but turn OFF advertising and
+ * personalization/remarketing signals.
+ */
+export function grantEssential(): void {
     if (!GA_ID) return
     window.gtag('consent', 'update', {
         ad_storage: 'denied',
         ad_user_data: 'denied',
         ad_personalization: 'denied',
-        analytics_storage: 'denied',
+        analytics_storage: 'granted',
     })
 }
 
